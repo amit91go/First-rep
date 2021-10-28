@@ -1,0 +1,34 @@
+version: '3'
+services:
+  search:
+    build: ./searchservice
+    image: searchimage
+    restart: always
+    ports:
+      - "9999:3000"
+    
+  chart:
+    build: ./chartservice
+    image: chartimage
+    restart: always
+    ports:
+      - "8888:3000"
+   
+  cover:
+    build: ./imageservice
+    image: coverimage
+    restart: always
+    ports:
+      - "7777:3000"
+  
+  web:
+    build: ./web
+    image: webimage
+    restart: always
+    ports:
+      - "8989:3000"
+    links:
+      - search
+      - chart
+      - cover
+     
