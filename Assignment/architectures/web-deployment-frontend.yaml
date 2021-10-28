@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-d-f
+  labels:
+    app: web-f
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-f
+  template:
+    metadata:
+      labels:
+        app: web-f
+    spec:
+      containers:
+      - name: web
+        image: webimage
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 0.1
+            memory: "200Mi"

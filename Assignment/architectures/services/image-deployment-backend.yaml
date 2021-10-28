@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-d-b
+  labels:
+    app: image-b
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: image-b
+  template:
+    metadata:
+      labels:
+        app: image-b
+    spec:
+      containers:
+      - name: image
+        image: coverimage
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8082
+        resources:
+          limits:
+            cpu: 0.1
+            memory: "200Mi"
