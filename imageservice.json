@@ -1,0 +1,43 @@
+{
+  "id": "/imageservice",
+  "instances": 2,
+  "cpus": 0.1,
+  "mem": 128,
+  "container": {
+    "portMappings": [
+      {
+        "containerPort": 8082,
+        "hostPort": 0,
+        "labels": {
+          "VIP_0": "/imageservice:8082"
+        },
+        "protocol": "tcp"
+      }
+    ],
+    "type": "MESOS",
+    "docker": {
+      "image": "localhost:5000/coverimage",
+      "forcePullImage": false
+    }
+  },
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "maxConsecutiveFailures": 3,
+      "portIndex": 0,
+      "timeoutSeconds": 20,
+      "delaySeconds": 15,
+      "protocol": "MESOS_HTTP",
+      "path": "/api/covers/5EYZZvmNAH5VZCwuzYJqoA"
+    }
+  ],
+  "networks": [
+    {
+      "name": "dcos",
+      "mode": "container"
+    }
+  ],
+  "requirePorts": false,
+  "role": "slave_public"
+}

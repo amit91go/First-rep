@@ -1,0 +1,45 @@
+{
+  "id": "/searchservice",
+  "instances": 2,
+  "cpus": 0.1,
+  "mem": 128,
+  "container": {
+    "portMappings": [
+      {
+        "containerPort": 8081,
+        "hostPort": 0,
+        "labels": {
+          "VIP_0": "/searchservice:8081"
+        },
+        "protocol": "tcp"
+      }
+    ],
+    "type": "MESOS",
+    "volumes": [],
+    "docker": {
+      "image": "localhost:5000/searchimage",
+      "forcePullImage": false,
+      "parameters": []
+    }
+  },
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "maxConsecutiveFailures": 3,
+      "portIndex": 0,
+      "timeoutSeconds": 20,
+      "delaySeconds": 15,
+      "protocol": "MESOS_HTTP",
+      "path": "/api/artists/search?artist=shaan"
+    }
+  ],
+  "networks": [
+    {
+      "name": "dcos",
+      "mode": "container"
+    }
+  ],
+  "requirePorts": false,
+  "role": "slave_public"
+}

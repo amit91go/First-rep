@@ -1,0 +1,56 @@
+{
+  "id": "/frontend",
+  "acceptedResourceRoles": [
+    "slave_public"
+  ],
+  "container": {
+    "portMappings": [
+      {
+        "containerPort": 3000,
+        "labels": {
+          "VIP_0": "/frontend:3000"
+        },
+        "protocol": "tcp"
+      }
+    ],
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "localhost:5000/webimage",
+      "forcePullImage": false,
+      "privileged": false,
+      "parameters": []
+    }
+  },
+  "cpus": 0.1,
+  "disk": 0,
+  "labels":{
+    "HAPROXY_GROUP": "external",
+    "HAPROXY_0_MODE": "http",
+    "HAPROXY_0_PORT": "3001"
+  },
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "maxConsecutiveFailures": 3,
+      "portIndex": 0,
+      "timeoutSeconds": 20,
+      "delaySeconds": 15,
+      "protocol": "MESOS_HTTP",
+      "path": "/",
+      "ipProtocol": "IPv4"
+    }
+  ],
+  "instances": 2,
+  "mem": 128,
+  "gpus": 0,
+  "networks": [
+    {
+      "name": "dcos",
+      "mode": "container"
+    }
+  ],
+  "requirePorts": false,
+  "role": "slave_public"
+}
