@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search-d-b
+  labels:
+    app: search-b
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: search-b
+  template:
+    metadata:
+      labels:
+        app: search-b
+    spec:
+      containers:
+      - name: search
+        image: searchimage
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8081
+        resources:
+          limits:
+            cpu: 0.1
+            memory: "200Mi"
