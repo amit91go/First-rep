@@ -1,0 +1,3128 @@
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+14:46:50.493496 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 3849031492:3849031719, ack 184577070, win 512, options [nop,nop,TS val 1014144723 ecr 4162523722], length 227
+E...].@.>...,...	........k.D..l.....9......
+<r.....JGET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:46:50.495273 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 1:6841, ack 227, win 6146, options [nop,nop,TS val 4162528720 ecr 1014144723], length 6840
+E.....@.@.[q	...,.........l..k.'....R......
+..%.<r..HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-D4r6MIzBND3GJDWM7BF6oA"
+Date: Sat, 13 Nov 2021 14:46:50 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.7808220000005 1636814804188
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.71016699999949 1636814804188
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.4909890000004 1636814804188
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 48033792 1636814804189
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814804189
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814804189
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814804189
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000428524 1636814804189
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814804189
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814804189
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814804189
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814804189
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814804189
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21563648 1636814804189
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 190579 1636814804189
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814804189
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814804189
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814804189
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814804189
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814804189
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 901056 1636814804189
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 15935088 1636814804189
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3283072 1636814804189
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814804189
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814804189
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 130624 1636814804189
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814804189
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814804189
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814804189
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814804189
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11366
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11364
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seco
+14:46:50.495376 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 6841, win 481, options [nop,nop,TS val 1014144725 ecr 4162528720], length 0
+E..4].@.>...,...	........k.'........8+.....
+<r....%.
+14:46:50.495385 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 6841:7134, ack 227, win 6146, options [nop,nop,TS val 4162528720 ecr 1014144723], length 293
+E..Y..@.@.t.	...,............k.'....9P.....
+..%.<r..nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.308810386000024
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+
+14:46:50.495440 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 7134, win 480, options [nop,nop,TS val 1014144725 ecr 4162528720], length 0
+E..4].@.>...,...	........k.'........8+.....
+<r....%.
+14:46:50.614309 IP 2ba04c7626b7.51343 > 198.51.100.1.53: 7807+ PTR? 2.0.128.44.in-addr.arpa. (41)
+E..Eao@.@...	....3d....5.15..............2.0.128.44.in-addr.arpa.....
+14:46:50.642508 IP 198.51.100.1.53 > 2ba04c7626b7.51343: 7807 NXDomain 0/1/0 (96)
+E..|.F@.@.Ys.3d.	....5...h61.............2.0.128.44.in-addr.arpa................+.ampr.org.
+hostmaster.5}.Nm..........u.....
+14:46:50.645894 IP 2ba04c7626b7.58317 > 198.51.100.1.53: 39132+ PTR? 1.100.51.198.in-addr.arpa. (43)
+E..Gar@.@..|	....3d....5.35..............1.100.51.198.in-addr.arpa.....
+14:46:50.657831 IP 198.51.100.1.53 > 2ba04c7626b7.58317: 39132 NXDomain 0/1/0 (97)
+E..}.I@.@.Yo.3d.	....5...i62.............1.100.51.198.in-addr.arpa................*.z.arin.net..dns-ops.9x9y..........
+....*0
+14:46:55.289476 IP 2ba04c7626b7.58362 > 198.51.100.1.53: 46560+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\c}@.@..\	....3d....5.H6..............searchservice.marathon.l4lb.thisdcos	directory.....
+14:46:55.290398 IP 2ba04c7626b7.45868 > 198.51.100.1.53: 32263+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\c~@.@..[	....3d..,.5.H6.~............searchservice.marathon.l4lb.thisdcos	directory.....
+14:46:55.291080 IP 198.51.100.1.53 > 2ba04c7626b7.58362: 46560*- 1/0/0 A 11.212.22.21 (80)
+E..l.7@.@.U..3d.	....5...X6!.............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:46:55.291341 IP 2ba04c7626b7.41638 > 11.212.22.21.8081: Flags [S], seq 269330538, win 64860, options [mss 1380,sackOK,TS val 1882596822 ecr 0,nop,wscale 7], length 0
+E..<..@.@.	}	..............j.......\-......d...
+p6%.........
+14:46:55.291486 IP 198.51.100.1.53 > 2ba04c7626b7.45868: 32263*- 1/0/0 A 11.212.22.21 (80)
+E..l.8@.@.U..3d.	....5.,.X6!~............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:46:55.291568 IP 11.212.22.21.8081 > 2ba04c7626b7.41638: Flags [S.], seq 991798745, ack 269330539, win 64296, options [mss 1380,sackOK,TS val 1637611134 ecr 1882596822,nop,wscale 7], length 0
+E..<..@.>..Q....	.......;......k...(-......d...
+a..~p6%.....
+14:46:55.291583 IP 2ba04c7626b7.41638 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 1882596822 ecr 1637611134], length 0
+E..4..@.@.	.	..............k;.......-......
+p6%.a..~
+14:46:55.291588 IP 2ba04c7626b7.42393 > 198.51.100.1.53: 64506+ PTR? 21.22.212.11.in-addr.arpa. (43)
+E..Gc.@.@..o	....3d....5.35..............21.22.212.11.in-addr.arpa.....
+14:46:55.291755 IP 2ba04c7626b7.41638 > 11.212.22.21.8081: Flags [P.], seq 1:225, ack 1, win 507, options [nop,nop,TS val 1882596823 ecr 1637611134], length 224
+E.....@.@...	..............k;........r.....
+p6%.a..~GET /api/artists/search?artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:46:55.291838 IP 11.212.22.21.8081 > 2ba04c7626b7.41638: Flags [.], ack 225, win 502, options [nop,nop,TS val 1637611135 ecr 1882596823], length 0
+E..4.h@.>.......	.......;......K....-......
+a...p6%.
+14:46:55.291948 IP 2ba04c7626b7.41640 > 11.212.22.21.8081: Flags [S], seq 1485199704, win 64860, options [mss 1380,sackOK,TS val 1882596823 ecr 0,nop,wscale 7], length 0
+E..<.V@.@.~.	...........X.YX.......\-......d...
+p6%.........
+14:46:55.292092 IP 11.212.22.21.8081 > 2ba04c7626b7.41640: Flags [S.], seq 4020124570, ack 1485199705, win 64296, options [mss 1380,sackOK,TS val 3398349920 ecr 1882596823,nop,wscale 7], length 0
+E..<..@.>..Q....	.........;.X.YY...(-......d...
+...`p6%.....
+14:46:55.292106 IP 2ba04c7626b7.41640 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 1882596823 ecr 3398349920], length 0
+E..4.W@.@...	...........X.YY..;.....-......
+p6%....`
+14:46:55.292216 IP 2ba04c7626b7.41640 > 11.212.22.21.8081: Flags [P.], seq 1:235, ack 1, win 507, options [nop,nop,TS val 1882596823 ecr 3398349920], length 234
+E....X@.@.~.	...........X.YY..;......|.....
+p6%....`GET /api/tracks/search?title=Nara&artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:46:55.292315 IP 11.212.22.21.8081 > 2ba04c7626b7.41640: Flags [.], ack 235, win 502, options [nop,nop,TS val 3398349920 ecr 1882596823], length 0
+E..4.S@.>.......	.........;.X.ZC....-......
+...`p6%.
+14:46:55.292715 IP 11.212.22.21.8081 > 2ba04c7626b7.41638: Flags [P.], seq 1:109, ack 225, win 502, options [nop,nop,TS val 1637611135 ecr 1882596823], length 108
+E....i@.>.......	.......;......K....-......
+a...p6%.HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:46:55 GMT
+Content-type: application/json
+Content-length: 46
+
+
+14:46:55.292725 IP 2ba04c7626b7.41638 > 11.212.22.21.8081: Flags [.], ack 109, win 507, options [nop,nop,TS val 1882596824 ecr 1637611135], length 0
+E..4..@.@.	.	..............K;..F....-......
+p6%.a...
+14:46:55.292819 IP 11.212.22.21.8081 > 2ba04c7626b7.41638: Flags [P.], seq 109:155, ack 225, win 502, options [nop,nop,TS val 1637611136 ecr 1882596824], length 46
+E..b.j@.>.......	.......;..F...K....-......
+a...p6%.{"id":"3XHO7cRUPCLOr6jwp8vsx5","name":"alt-J"}
+14:46:55.292833 IP 2ba04c7626b7.41638 > 11.212.22.21.8081: Flags [.], ack 155, win 507, options [nop,nop,TS val 1882596824 ecr 1637611136], length 0
+E..4..@.@.	.	..............K;..t....-......
+p6%.a...
+14:46:55.293158 IP 2ba04c7626b7.41638 > 11.212.22.21.8081: Flags [F.], seq 225, ack 155, win 507, options [nop,nop,TS val 1882596824 ecr 1637611136], length 0
+E..4..@.@.	.	..............K;..t....-......
+p6%.a...
+14:46:55.293884 IP 2ba04c7626b7.55085 > 198.51.100.1.53: 20483+ A? chartservice.marathon.l4lb.thisdcos.directory. (63)
+E..[c.@.@..Z	....3d..-.5.G6.P............chartservice.marathon.l4lb.thisdcos	directory.....
+14:46:55.293959 IP 11.212.22.21.8081 > 2ba04c7626b7.41638: Flags [F.], seq 155, ack 226, win 502, options [nop,nop,TS val 1637611137 ecr 1882596824], length 0
+E..4.k@.>.......	.......;..t...L....-......
+a...p6%.
+14:46:55.293972 IP 2ba04c7626b7.41638 > 11.212.22.21.8081: Flags [.], ack 156, win 507, options [nop,nop,TS val 1882596825 ecr 1637611137], length 0
+E..4..@.@.	.	..............L;..u....-......
+p6%.a...
+14:46:55.294362 IP 198.51.100.1.53 > 2ba04c7626b7.55085: 20483*- 1/0/0 A 11.230.177.124 (79)
+E..k.9@.@.U..3d.	....5.-.W6 P............chartservice.marathon.l4lb.thisdcos	directory....................|
+14:46:55.294599 IP 2ba04c7626b7.37220 > 11.230.177.124.8083: Flags [S], seq 723971472, win 64860, options [mss 1380,sackOK,TS val 1357890368 ecr 0,nop,wscale 7], length 0
+E..<jp@.@..g	......|.d..+&.........\.......d...
+P..@........
+14:46:55.294750 IP 11.230.177.124.8083 > 2ba04c7626b7.37220: Flags [S.], seq 843192057, ack 723971473, win 64296, options [mss 1380,sackOK,TS val 4060670223 ecr 1357890368,nop,wscale 7], length 0
+E..<..@.>.s....|	......d2B..+&.....(.......d...
+....P..@....
+14:46:55.294763 IP 2ba04c7626b7.37220 > 11.230.177.124.8083: Flags [.], ack 1, win 507, options [nop,nop,TS val 1357890369 ecr 4060670223], length 0
+E..4jq@.@..n	......|.d..+&..2B.............
+P..A....
+14:46:55.294865 IP 2ba04c7626b7.37220 > 11.230.177.124.8083: Flags [P.], seq 1:226, ack 1, win 507, options [nop,nop,TS val 1357890369 ecr 4060670223], length 225
+E...jr@.@...	......|.d..+&..2B.............
+P..A....GET /api/charts/3XHO7cRUPCLOr6jwp8vsx5 HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: chartservice.marathon.l4lb.thisdcos.directory:8083
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:46:55.294946 IP 11.230.177.124.8083 > 2ba04c7626b7.37220: Flags [.], ack 226, win 502, options [nop,nop,TS val 4060670223 ecr 1357890369], length 0
+E..4jK@.>.	....|	......d2B..+&.r...........
+....P..A
+14:46:55.298440 IP 11.230.177.124.8083 > 2ba04c7626b7.37220: Flags [P.], seq 1:110, ack 226, win 502, options [nop,nop,TS val 4060670226 ecr 1357890369], length 109
+E...jL@.>.	&...|	......d2B..+&.r.....x.....
+....P..AHTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:46:55 GMT
+Content-type: application/json
+Content-length: 352
+
+
+14:46:55.298471 IP 2ba04c7626b7.37220 > 11.230.177.124.8083: Flags [.], ack 110, win 507, options [nop,nop,TS val 1357890372 ecr 4060670226], length 0
+E..4js@.@..l	......|.d..+&.r2B.g...........
+P..D....
+14:46:55.298583 IP 11.230.177.124.8083 > 2ba04c7626b7.37220: Flags [P.], seq 110:462, ack 226, win 502, options [nop,nop,TS val 4060670226 ecr 1357890372], length 352
+E...jM@.>..2...|	......d2B.g+&.r.....k.....
+....P..D[{"artists":"alt-J","id":"3Wu6MhnZuLuzfH5wFC2g9i","title":"Breezeblocks"},{"artists":"alt-J","id":"6jXJmMCmEXC8SmZTK0KId6","title":"Left Hand Free"},{"artists":"alt-J","id":"4UoZigJdqn8y8jmMzuvmLd","title":"U&ME"},{"artists":"alt-J","id":"09BGE23vqmtylTUBEhzu2H","title":"Fitzpleasure"},{"artists":"alt-J","id":"7EDMvrb5PA5TP0VQ8z9p82","title":"Taro"}]
+14:46:55.298591 IP 2ba04c7626b7.37220 > 11.230.177.124.8083: Flags [.], ack 462, win 505, options [nop,nop,TS val 1357890372 ecr 4060670226], length 0
+E..4jt@.@..k	......|.d..+&.r2B.............
+P..D....
+14:46:55.298833 IP 2ba04c7626b7.37220 > 11.230.177.124.8083: Flags [F.], seq 226, ack 462, win 505, options [nop,nop,TS val 1357890373 ecr 4060670226], length 0
+E..4ju@.@..j	......|.d..+&.r2B.............
+P..E....
+14:46:55.298967 IP 11.230.177.124.8083 > 2ba04c7626b7.37220: Flags [F.], seq 462, ack 227, win 502, options [nop,nop,TS val 4060670227 ecr 1357890373], length 0
+E..4jN@.>.	....|	......d2B..+&.s...........
+....P..E
+14:46:55.304442 IP 2ba04c7626b7.35042 > 198.51.100.1.53: 16508+ PTR? 124.177.230.11.in-addr.arpa. (45)
+E..Ic.@.@..j	....3d....5.55.@|...........124.177.230.11.in-addr.arpa.....
+14:46:55.315863 IP 198.51.100.1.53 > 2ba04c7626b7.35042: 16508 NXDomain 0/1/0 (113)
+E....>@.@.Uj.3d.	....5...y6B@|...........124.177.230.11.in-addr.arpa................8.b.in-addr-servers.#.nstld.iana.org.xw...........	:.....
+14:46:55.328137 IP 11.212.22.21.8081 > 2ba04c7626b7.41640: Flags [P.], seq 1:108, ack 235, win 502, options [nop,nop,TS val 3398349956 ecr 1882596823], length 107
+E....T@.>.......	.........;.X.ZC....-......
+....p6%.HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:46:55 GMT
+Content-type: application/json
+Content-length: 2
+
+
+14:46:55.328163 IP 2ba04c7626b7.41640 > 11.212.22.21.8081: Flags [.], ack 108, win 507, options [nop,nop,TS val 1882596859 ecr 3398349956], length 0
+E..4.Y@.@.~.	...........X.ZC..<.....-......
+p6%.....
+14:46:55.328344 IP 11.212.22.21.8081 > 2ba04c7626b7.41640: Flags [P.], seq 108:110, ack 235, win 502, options [nop,nop,TS val 3398349956 ecr 1882596859], length 2
+E..6.U@.>.......	.........<.X.ZC....-......
+....p6%.{}
+14:46:55.328353 IP 2ba04c7626b7.41640 > 11.212.22.21.8081: Flags [.], ack 110, win 507, options [nop,nop,TS val 1882596859 ecr 3398349956], length 0
+E..4.Z@.@.~.	...........X.ZC..<.....-......
+p6%.....
+14:46:55.328589 IP 2ba04c7626b7.41640 > 11.212.22.21.8081: Flags [F.], seq 235, ack 110, win 507, options [nop,nop,TS val 1882596859 ecr 3398349956], length 0
+E..4.[@.@.~.	...........X.ZC..<.....-......
+p6%.....
+14:46:55.328969 IP 11.212.22.21.8081 > 2ba04c7626b7.41640: Flags [F.], seq 110, ack 236, win 502, options [nop,nop,TS val 3398349957 ecr 1882596859], length 0
+E..4.V@.>.......	.........<.X.ZD....-......
+....p6%.
+14:46:55.328985 IP 2ba04c7626b7.41640 > 11.212.22.21.8081: Flags [.], ack 111, win 507, options [nop,nop,TS val 1882596860 ecr 3398349957], length 0
+E..4.\@.@.~.	...........X.ZD..<	....-......
+p6%.....
+14:46:55.329455 IP 2ba04c7626b7.43478 > 198.51.100.1.53: 15109+ A? imageservice.marathon.l4lb.thisdcos.directory. (63)
+E..[c.@.@..U	....3d....5.G6.;............imageservice.marathon.l4lb.thisdcos	directory.....
+14:46:55.330067 IP 198.51.100.1.53 > 2ba04c7626b7.43478: 15109*- 1/0/0 A 11.248.165.89 (79)
+E..k.A@.@.U..3d.	....5...W6 ;............imageservice.marathon.l4lb.thisdcos	directory....................Y
+14:46:55.330310 IP 2ba04c7626b7.45618 > 11.248.165.89.8082: Flags [S], seq 2180429436, win 64860, options [mss 1380,sackOK,TS val 2277504335 ecr 0,nop,wscale 7], length 0
+E..<.x@.@..o	......Y.2.....|.......\.......d...
+...O........
+14:46:55.330529 IP 11.248.165.89.8082 > 2ba04c7626b7.45618: Flags [S.], seq 2612540237, ack 2180429437, win 64296, options [mss 1380,sackOK,TS val 719137167 ecr 2277504335,nop,wscale 7], length 0
+E..<..@.>......Y	......2..3M...}...(.......d...
+*.)....O....
+14:46:55.330547 IP 2ba04c7626b7.45618 > 11.248.165.89.8082: Flags [.], ack 1, win 507, options [nop,nop,TS val 2277504335 ecr 719137167], length 0
+E..4.y@.@..v	......Y.2.....}..3N...........
+...O*.).
+14:46:55.330599 IP 2ba04c7626b7.54996 > 198.51.100.1.53: 11904+ PTR? 89.165.248.11.in-addr.arpa. (44)
+E..Hc.@.@..g	....3d....5.45..............89.165.248.11.in-addr.arpa.....
+14:46:55.330675 IP 2ba04c7626b7.45618 > 11.248.165.89.8082: Flags [P.], seq 1:213, ack 1, win 507, options [nop,nop,TS val 2277504336 ecr 719137167], length 212
+E....z@.@...	......Y.2.....}..3N...........
+...P*.).GET /api/covers/undefined HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: imageservice.marathon.l4lb.thisdcos.directory:8082
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:46:55.330789 IP 11.248.165.89.8082 > 2ba04c7626b7.45618: Flags [.], ack 213, win 502, options [nop,nop,TS val 719137168 ecr 2277504336], length 0
+E..4.]@.>......Y	......2..3N...Q...........
+*.)....P
+14:46:55.342459 IP 198.51.100.1.53 > 2ba04c7626b7.54996: 11904 NXDomain 0/1/0 (112)
+E....C@.@.Uf.3d.	....5...x6A.............89.165.248.11.in-addr.arpa..............7.8.b.in-addr-servers.".nstld.iana.org.xw...........	:.....
+14:46:55.428072 IP 11.248.165.89.8082 > 2ba04c7626b7.45618: Flags [P.], seq 1:116, ack 213, win 502, options [nop,nop,TS val 719137265 ecr 2277504336], length 115
+E....^@.>......Y	......2..3N...Q.....m.....
+*.)....PHTTP/1.1 404 Not Found
+Date: Sat, 13 Nov 2021 14:46:55 GMT
+Content-type: application/json
+Content-length: 35
+
+
+14:46:55.428113 IP 2ba04c7626b7.45618 > 11.248.165.89.8082: Flags [.], ack 116, win 507, options [nop,nop,TS val 2277504433 ecr 719137265], length 0
+E..4.{@.@..t	......Y.2.....Q..3............
+....*.).
+14:46:55.428388 IP 11.248.165.89.8082 > 2ba04c7626b7.45618: Flags [P.], seq 116:151, ack 213, win 502, options [nop,nop,TS val 719137265 ecr 2277504433], length 35
+E..W._@.>..m...Y	......2..3....Q...........
+*.).....{"message":"Invalid country code!"}
+14:46:55.428428 IP 2ba04c7626b7.45618 > 11.248.165.89.8082: Flags [.], ack 151, win 507, options [nop,nop,TS val 2277504433 ecr 719137265], length 0
+E..4.|@.@..s	......Y.2.....Q..3............
+....*.).
+14:46:55.428721 IP 2ba04c7626b7.45618 > 11.248.165.89.8082: Flags [F.], seq 213, ack 151, win 507, options [nop,nop,TS val 2277504434 ecr 719137265], length 0
+E..4.}@.@..r	......Y.2.....Q..3............
+....*.).
+14:46:55.475859 IP 11.248.165.89.8082 > 2ba04c7626b7.45618: Flags [.], ack 214, win 502, options [nop,nop,TS val 719137313 ecr 2277504434], length 0
+E..4.`@.>......Y	......2..3....R...........
+*.*!....
+14:46:55.493489 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 227:454, ack 7134, win 512, options [nop,nop,TS val 1014149723 ecr 4162528720], length 227
+E...].@.>...,...	........k.'........9......
+<r.[..%.GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:46:55.528125 IP 11.248.165.89.8082 > 2ba04c7626b7.45618: Flags [F.], seq 151, ack 214, win 502, options [nop,nop,TS val 719137365 ecr 2277504434], length 0
+E..4.a@.>......Y	......2..3....R...........
+*.*U....
+14:46:55.528159 IP 2ba04c7626b7.45618 > 11.248.165.89.8082: Flags [.], ack 152, win 507, options [nop,nop,TS val 2277504533 ecr 719137365], length 0
+E..4..@.@.}.	......Y.2.....R..3.....
+;.....
+....*.*U
+14:46:55.535697 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [.], ack 454, win 6146, options [nop,nop,TS val 4162533761 ecr 1014149723], length 0
+E..4..@.@.v#	...,............k.
+....8+.....
+..9.<r.[
+14:46:55.831818 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 7134:13974, ack 454, win 6146, options [nop,nop,TS val 4162534057 ecr 1014149723], length 6840
+E.....@.@.[j	...,............k.
+....R......
+..:.<r.[HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-LZc2RH8kkWOMevUEuj08Ug"
+Date: Sat, 13 Nov 2021 14:46:55 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.7881480000005 1636814814191
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.71068399999949 1636814814191
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.4988320000003 1636814814191
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47509504 1636814814192
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814814192
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814814192
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814814192
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000418688 1636814814192
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814814191
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814814191
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814814192
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814814192
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814814192
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 20976648 1636814814192
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 153458 1636814814192
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814814192
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814814192
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814814192
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814814192
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814814192
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 309304 1636814814192
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 15939616 1636814814192
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3283296 1636814814192
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814814192
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814814192
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 722376 1636814814192
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814814192
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814814192
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814814192
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814814192
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11367
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11365
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seco
+14:46:55.832007 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 13974, win 481, options [nop,nop,TS val 1014150062 ecr 4162534057], length 0
+E..4].@.>...,...	........k.
+........8+.....
+<r....:.
+14:46:55.832028 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 13974:14267, ack 454, win 6146, options [nop,nop,TS val 4162534057 ecr 1014149723], length 293
+E..Y..@.@.t.	...,............k.
+....9P.....
+..:.<r.[nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.309471528000024
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+
+14:46:55.832171 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 14267, win 480, options [nop,nop,TS val 1014150062 ecr 4162534057], length 0
+E..4].@.>...,...	........k.
+........8+.....
+<r....:.
+14:47:00.493480 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 454:681, ack 14267, win 512, options [nop,nop,TS val 1014154723 ecr 4162534057], length 227
+E...].@.>...,...	........k.
+........9......
+<r....:.GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:00.493511 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [.], ack 681, win 6146, options [nop,nop,TS val 4162538718 ecr 1014154723], length 0
+E..4..@.@.v.	...,............k......8+.....
+..L.<r..
+14:47:00.495059 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 14267:21107, ack 681, win 6146, options [nop,nop,TS val 4162538720 ecr 1014154723], length 6840
+E.....@.@.[c	...,............k......R......
+..L.<r..HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-LZc2RH8kkWOMevUEuj08Ug"
+Date: Sat, 13 Nov 2021 14:47:00 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.7881480000005 1636814814191
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.71068399999949 1636814814191
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.4988320000003 1636814814191
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47509504 1636814814192
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814814192
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814814192
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814814192
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000418688 1636814814192
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814814191
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814814191
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814814192
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814814192
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814814192
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 20976648 1636814814192
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 153458 1636814814192
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814814192
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814814192
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814814192
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814814192
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814814192
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 309304 1636814814192
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 15939616 1636814814192
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3283296 1636814814192
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814814192
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814814192
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 722376 1636814814192
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814814192
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814814192
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814814192
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814814192
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11367
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11365
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seco
+14:47:00.495206 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 21107, win 481, options [nop,nop,TS val 1014154725 ecr 4162538720], length 0
+E..4].@.>...,...	........k..........8+.....
+<r....L.
+14:47:00.495217 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 21107:21400, ack 681, win 6146, options [nop,nop,TS val 4162538720 ecr 1014154723], length 293
+E..Y..@.@.t.	...,............k......9P.....
+..L.<r..nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.309471528000024
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+
+14:47:00.495288 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 21400, win 480, options [nop,nop,TS val 1014154725 ecr 4162538720], length 0
+E..4].@.>...,...	........k..........8+.....
+<r....L.
+14:47:05.493427 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 681:908, ack 21400, win 512, options [nop,nop,TS val 1014159723 ecr 4162538720], length 227
+E...].@.>...,...	........k..........9......
+<r.k..L.GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:05.493460 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [.], ack 908, win 6146, options [nop,nop,TS val 4162543718 ecr 1014159723], length 0
+E..4..@.@.v.	...,............k......8+.....
+..`f<r.k
+14:47:05.494984 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 21400:28240, ack 908, win 6146, options [nop,nop,TS val 4162543720 ecr 1014159723], length 6840
+E.....@.@.[\	...,............k......R......
+..`h<r.kHTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-W8PtoXbC3iHyH0YlCJCJ0Q"
+Date: Sat, 13 Nov 2021 14:47:05 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.8421620000006 1636814824194
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.71548399999949 1636814824194
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.5576460000003 1636814824194
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47304704 1636814824195
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814824195
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814824195
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814824194
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000464521 1636814824195
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814824194
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814824194
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814824194
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814824194
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814824194
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21002240 1636814824194
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 153458 1636814824194
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814824194
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814824194
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814824194
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814824194
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814824194
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 270960 1636814824194
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16000256 1636814824194
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3286592 1636814824194
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814824194
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814824194
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 760720 1636814824194
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814824194
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814824194
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814824194
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814824194
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11367
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11365
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seco
+14:47:05.495078 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 28240, win 481, options [nop,nop,TS val 1014159725 ecr 4162543720], length 0
+E..4].@.>...,...	........k.....}....8+.....
+<r.m..`h
+14:47:05.495088 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 28240:28533, ack 908, win 6146, options [nop,nop,TS val 4162543720 ecr 1014159723], length 293
+E..Y..@.@.t.	...,..........}.k......9P.....
+..`h<r.knds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.309471528000024
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+
+14:47:05.495147 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 28533, win 480, options [nop,nop,TS val 1014159725 ecr 4162543720], length 0
+E..4].@.>...,...	........k..........8+.....
+<r.m..`h
+14:47:10.493530 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 908:1135, ack 28533, win 512, options [nop,nop,TS val 1014164723 ecr 4162543720], length 227
+E...].@.>...,...	........k..........9......
+<r....`hGET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:10.493585 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [.], ack 1135, win 6146, options [nop,nop,TS val 4162548718 ecr 1014164723], length 0
+E..4..@.@.v.	...,............k......8+.....
+..s.<r..
+14:47:10.496572 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 28533:35373, ack 1135, win 6146, options [nop,nop,TS val 4162548721 ecr 1014164723], length 6840
+E.....@.@.[U	...,............k......R......
+..s.<r..HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-W8PtoXbC3iHyH0YlCJCJ0Q"
+Date: Sat, 13 Nov 2021 14:47:10 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.8421620000006 1636814824194
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.71548399999949 1636814824194
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.5576460000003 1636814824194
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47304704 1636814824195
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814824195
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814824195
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814824194
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000464521 1636814824195
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814824194
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814824194
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814824194
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814824194
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814824194
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21002240 1636814824194
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 153458 1636814824194
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814824194
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814824194
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814824194
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814824194
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814824194
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 270960 1636814824194
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16000256 1636814824194
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3286592 1636814824194
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814824194
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814824194
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 760720 1636814824194
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814824194
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814824194
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814824194
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814824194
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11367
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11365
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seco
+14:47:10.496733 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 35373, win 481, options [nop,nop,TS val 1014164726 ecr 4162548721], length 0
+E..4].@.>...,...	........k.....Z....8+.....
+<r....s.
+14:47:10.496752 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 35373:35666, ack 1135, win 6146, options [nop,nop,TS val 4162548721 ecr 1014164723], length 293
+E..Y..@.@.t.	...,..........Z.k......9P.....
+..s.<r..nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.309471528000024
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+
+14:47:10.496907 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 35666, win 506, options [nop,nop,TS val 1014164727 ecr 4162548721], length 0
+E..4].@.>...,...	........k..........8+.....
+<r....s.
+14:47:15.493599 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 1135:1362, ack 35666, win 512, options [nop,nop,TS val 1014169723 ecr 4162548721], length 227
+E...].@.>...,...	........k..........9......
+<s.{..s.GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:15.496322 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 35666:42506, ack 1362, win 6146, options [nop,nop,TS val 4162553721 ecr 1014169723], length 6840
+E.....@.@.[O	...,............k......R......
+...y<s.{HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-gdoXS4VmBuLN2yUR28ysVQ"
+Date: Sat, 13 Nov 2021 14:47:15 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.8490240000006 1636814834196
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.71592499999949 1636814834196
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.5649490000003 1636814834196
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47841280 1636814834197
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814834197
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814834197
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814834197
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000421569 1636814834197
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814834197
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814834197
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814834197
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814834197
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814834197
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21410760 1636814834197
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 183668 1636814834197
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814834197
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814834197
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814834197
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814834197
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814834197
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 677784 1636814834197
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16001728 1636814834197
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3286816 1636814834197
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814834197
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814834197
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 353896 1636814834197
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814834197
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814834197
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814834197
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814834197
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11367
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11365
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seco
+14:47:15.496526 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 42506, win 481, options [nop,nop,TS val 1014169726 ecr 4162553721], length 0
+E..4].@.>...,...	........k.....7....8+.....
+<s.~...y
+14:47:15.496545 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 42506:42799, ack 1362, win 6146, options [nop,nop,TS val 4162553721 ecr 1014169723], length 293
+E..Y..@.@.t.	...,..........7.k......9P.....
+...y<s.{nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.309471528000024
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+
+14:47:15.496714 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 42799, win 506, options [nop,nop,TS val 1014169726 ecr 4162553721], length 0
+E..4].@.>...,...	........k.....\....8+.....
+<s.~...y
+14:47:18.384924 IP 9.0.2.129.44286 > 2ba04c7626b7.3000: Flags [S], seq 4233883162, win 64860, options [mss 1380,sackOK,TS val 1943958042 ecr 0,nop,wscale 7], length 0
+E..<@.@.@...	...	........[.........\.2.....d...
+s.r.........
+14:47:18.384969 IP 2ba04c7626b7.3000 > 9.0.2.129.44286: Flags [S.], seq 2811912743, ack 4233883163, win 64296, options [mss 1380,sackOK,TS val 2537744366 ecr 1943958042,nop,wscale 7], length 0
+E..<..@.@.#.	...	.........b'.[.....(.2.....d...
+.B..s.r.....
+14:47:18.385007 IP 9.0.2.129.44286 > 2ba04c7626b7.3000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1943958042 ecr 2537744366], length 0
+E..4@.@.@...	...	........[....b(.....*.....
+s.r..B..
+14:47:18.385059 IP 9.0.2.129.44286 > 2ba04c7626b7.3000: Flags [P.], seq 1:19, ack 1, win 507, options [nop,nop,TS val 1943958042 ecr 2537744366], length 18
+E..F@.@.@...	...	........[....b(.....<.....
+s.r..B..GET / HTTP/1.0
+
+
+14:47:18.385070 IP 2ba04c7626b7.3000 > 9.0.2.129.44286: Flags [.], ack 19, win 503, options [nop,nop,TS val 2537744366 ecr 1943958042], length 0
+E..4vs@.@..M	...	.........b(.[.-.....*.....
+.B..s.r.
+14:47:18.385643 IP 2ba04c7626b7.35005 > 198.51.100.1.53: 8877+ PTR? 129.2.0.9.in-addr.arpa. (40)
+E..Dc.@.@..D	....3d....5.05."............129.2.0.9.in-addr.arpa.....
+14:47:18.387179 IP 2ba04c7626b7.40692 > 198.51.100.1.53: 10610+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\c.@.@..+	....3d....5.H6.)r...........searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:18.387584 IP 2ba04c7626b7.53418 > 198.51.100.1.53: 54998+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\c.@.@..*	....3d....5.H6..............searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:18.387937 IP 198.51.100.1.53 > 2ba04c7626b7.40692: 10610*- 1/0/0 A 11.212.22.21 (80)
+E..l.N@.@.Q{.3d.	....5...X6!)r...........searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:18.388376 IP 2ba04c7626b7.41792 > 11.212.22.21.8081: Flags [S], seq 3551125233, win 64860, options [mss 1380,sackOK,TS val 1882619919 ecr 0,nop,wscale 7], length 0
+E..<..@.@.k~	........@.............\-......d...
+p6..........
+14:47:18.388628 IP 11.212.22.21.8081 > 2ba04c7626b7.41792: Flags [S.], seq 3010553595, ack 3551125234, win 64296, options [mss 1380,sackOK,TS val 1637634231 ecr 1882619919,nop,wscale 7], length 0
+E..<..@.>..Q....	......@.qf........(-......d...
+a.P.p6......
+14:47:18.388656 IP 198.51.100.1.53 > 2ba04c7626b7.53418: 54998*- 1/0/0 A 11.212.22.21 (80)
+E..l.O@.@.Qz.3d.	....5...X6!.............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:18.388661 IP 2ba04c7626b7.41792 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 1882619919 ecr 1637634231], length 0
+E..4..@.@.k.	........@.......qf.....-......
+p6..a.P.
+14:47:18.388906 IP 2ba04c7626b7.41792 > 11.212.22.21.8081: Flags [P.], seq 1:225, ack 1, win 507, options [nop,nop,TS val 1882619920 ecr 1637634231], length 224
+E.....@.@.j.	........@.......qf......r.....
+p6..a.P.GET /api/artists/search?artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:18.389131 IP 11.212.22.21.8081 > 2ba04c7626b7.41792: Flags [.], ack 225, win 502, options [nop,nop,TS val 1637634232 ecr 1882619920], length 0
+E..4..@.>.......	......@.qf.........-......
+a.P.p6..
+14:47:18.389305 IP 2ba04c7626b7.41794 > 11.212.22.21.8081: Flags [S], seq 2912439661, win 64860, options [mss 1380,sackOK,TS val 1882619920 ecr 0,nop,wscale 7], length 0
+E..<..@.@.k.	........B....Mm.......\-......d...
+p6..........
+14:47:18.389573 IP 11.212.22.21.8081 > 2ba04c7626b7.41794: Flags [S.], seq 3949835894, ack 2912439662, win 64296, options [mss 1380,sackOK,TS val 3398373017 ecr 1882619920,nop,wscale 7], length 0
+E..<..@.>..Q....	......B.m.v..Mn...(-......d...
+....p6......
+14:47:18.389600 IP 2ba04c7626b7.41794 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 1882619920 ecr 3398373017], length 0
+E..4..@.@.k.	........B....Mn.m.w....-......
+p6......
+14:47:18.389818 IP 2ba04c7626b7.41794 > 11.212.22.21.8081: Flags [P.], seq 1:235, ack 1, win 507, options [nop,nop,TS val 1882619921 ecr 3398373017], length 234
+E.....@.@.j.	........B....Mn.m.w.....|.....
+p6......GET /api/tracks/search?title=Nara&artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:18.389997 IP 11.212.22.21.8081 > 2ba04c7626b7.41794: Flags [.], ack 235, win 502, options [nop,nop,TS val 3398373018 ecr 1882619921], length 0
+E..4.h@.>.......	......B.m.w..NX....-......
+....p6..
+14:47:18.390453 IP 11.212.22.21.8081 > 2ba04c7626b7.41792: Flags [P.], seq 1:109, ack 225, win 502, options [nop,nop,TS val 1637634233 ecr 1882619920], length 108
+E.....@.>..F....	......@.qf.........-......
+a.P.p6..HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:18 GMT
+Content-type: application/json
+Content-length: 46
+
+
+14:47:18.390477 IP 2ba04c7626b7.41792 > 11.212.22.21.8081: Flags [.], ack 109, win 507, options [nop,nop,TS val 1882619921 ecr 1637634233], length 0
+E..4..@.@.k.	........@.......qgh....-......
+p6..a.P.
+14:47:18.390726 IP 11.212.22.21.8081 > 2ba04c7626b7.41792: Flags [P.], seq 109:155, ack 225, win 502, options [nop,nop,TS val 1637634233 ecr 1882619921], length 46
+E..b..@.>.......	......@.qgh........-......
+a.P.p6..{"id":"3XHO7cRUPCLOr6jwp8vsx5","name":"alt-J"}
+14:47:18.390745 IP 2ba04c7626b7.41792 > 11.212.22.21.8081: Flags [.], ack 155, win 507, options [nop,nop,TS val 1882619922 ecr 1637634233], length 0
+E..4..@.@.k.	........@.......qg.....-......
+p6..a.P.
+14:47:18.391263 IP 2ba04c7626b7.41792 > 11.212.22.21.8081: Flags [F.], seq 225, ack 155, win 507, options [nop,nop,TS val 1882619922 ecr 1637634233], length 0
+E..4..@.@.k.	........@.......qg.....-......
+p6..a.P.
+14:47:18.391323 IP 11.212.22.21.8081 > 2ba04c7626b7.41792: Flags [F.], seq 155, ack 225, win 502, options [nop,nop,TS val 1637634234 ecr 1882619922], length 0
+E..4..@.>.......	......@.qg.........-......
+a.P.p6..
+14:47:18.391424 IP 11.212.22.21.8081 > 2ba04c7626b7.41792: Flags [.], ack 226, win 502, options [nop,nop,TS val 1637634234 ecr 1882619922], length 0
+E..4..@.>.......	......@.qg.........-......
+a.P.p6..
+14:47:18.391447 IP 2ba04c7626b7.41792 > 11.212.22.21.8081: Flags [.], ack 156, win 507, options [nop,nop,TS val 1882619922 ecr 1637634234], length 0
+E..4..@.@.k.	........@.......qg.....-......
+p6..a.P.
+14:47:18.392528 IP 2ba04c7626b7.58175 > 198.51.100.1.53: 60333+ A? chartservice.marathon.l4lb.thisdcos.directory. (63)
+E..[c.@.@..)	....3d..?.5.G6..............chartservice.marathon.l4lb.thisdcos	directory.....
+14:47:18.393274 IP 198.51.100.1.53 > 2ba04c7626b7.58175: 60333*- 1/0/0 A 11.230.177.124 (79)
+E..k.P@.@.Qz.3d.	....5.?.W6 .............chartservice.marathon.l4lb.thisdcos	directory....................|
+14:47:18.393558 IP 2ba04c7626b7.37374 > 11.230.177.124.8083: Flags [S], seq 563812406, win 64860, options [mss 1380,sackOK,TS val 1357913467 ecr 0,nop,wscale 7], length 0
+E..<$.@.@.L.	......|....!..6.......\.......d...
+P..{........
+14:47:18.393732 IP 11.230.177.124.8083 > 2ba04c7626b7.37374: Flags [S.], seq 1491197006, ack 563812407, win 64296, options [mss 1380,sackOK,TS val 1557697103 ecr 1357913467,nop,wscale 7], length 0
+E..<..@.>.s....|	.......X..N!..7...(.......d...
+\..OP..{....
+14:47:18.436091 IP 11.212.22.21.8081 > 2ba04c7626b7.41794: Flags [P.], seq 1:108, ack 235, win 502, options [nop,nop,TS val 3398373064 ecr 1882619921], length 107
+E....i@.>.......	......B.m.w..NX....-......
+....p6..HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:18 GMT
+Content-type: application/json
+Content-length: 2
+
+
+14:47:18.436137 IP 2ba04c7626b7.41794 > 11.212.22.21.8081: Flags [.], ack 108, win 507, options [nop,nop,TS val 1882619967 ecr 3398373064], length 0
+E..4..@.@.k.	........B....NX.m......-......
+p6.?....
+14:47:18.436380 IP 11.212.22.21.8081 > 2ba04c7626b7.41794: Flags [P.], seq 108:110, ack 235, win 502, options [nop,nop,TS val 3398373064 ecr 1882619967], length 2
+E..6.j@.>.......	......B.m....NX....-......
+....p6.?{}
+14:47:18.436409 IP 2ba04c7626b7.41794 > 11.212.22.21.8081: Flags [.], ack 110, win 507, options [nop,nop,TS val 1882619967 ecr 3398373064], length 0
+E..4..@.@.k.	........B....NX.m......-......
+p6.?....
+14:47:18.436738 IP 2ba04c7626b7.41794 > 11.212.22.21.8081: Flags [F.], seq 235, ack 110, win 507, options [nop,nop,TS val 1882619968 ecr 3398373064], length 0
+E..4..@.@.k.	........B....NX.m......-......
+p6.@....
+14:47:18.437021 IP 11.212.22.21.8081 > 2ba04c7626b7.41794: Flags [F.], seq 110, ack 235, win 502, options [nop,nop,TS val 3398373065 ecr 1882619967], length 0
+E..4.k@.>.......	......B.m....NX....-......
+....p6.?
+14:47:18.437056 IP 2ba04c7626b7.41794 > 11.212.22.21.8081: Flags [.], ack 111, win 507, options [nop,nop,TS val 1882619968 ecr 3398373065], length 0
+E..4..@.@.k.	........B....NY.m......-......
+p6.@....
+14:47:18.437254 IP 11.212.22.21.8081 > 2ba04c7626b7.41794: Flags [.], ack 236, win 502, options [nop,nop,TS val 3398373065 ecr 1882619968], length 0
+E..4.l@.>.......	......B.m....NY....-......
+....p6.@
+14:47:18.438176 IP 2ba04c7626b7.43239 > 198.51.100.1.53: 4175+ A? imageservice.marathon.l4lb.thisdcos.directory. (63)
+E..[c.@.@.. 	....3d....5.G6..O...........imageservice.marathon.l4lb.thisdcos	directory.....
+14:47:18.439105 IP 198.51.100.1.53 > 2ba04c7626b7.43239: 4175*- 1/0/0 A 11.248.165.89 (79)
+E..k.U@.@.Qu.3d.	....5...W6 .O...........imageservice.marathon.l4lb.thisdcos	directory....................Y
+14:47:18.439536 IP 2ba04c7626b7.45772 > 11.248.165.89.8082: Flags [S], seq 3081203547, win 64860, options [mss 1380,sackOK,TS val 2277527444 ecr 0,nop,wscale 7], length 0
+E..<&.@.@.W.	......Y......o[.......\.......d...
+..O.........
+14:47:18.439864 IP 11.248.165.89.8082 > 2ba04c7626b7.45772: Flags [S.], seq 3547341541, ack 3081203548, win 64296, options [mss 1380,sackOK,TS val 1712463611 ecr 2277527444,nop,wscale 7], length 0
+E..<..@.>......Y	........p"...o\...(.......d...
+f.....O.....
+14:47:18.439894 IP 2ba04c7626b7.45772 > 11.248.165.89.8082: Flags [.], ack 1, win 507, options [nop,nop,TS val 2277527445 ecr 1712463611], length 0
+E..4&.@.@.W.	......Y......o\.p"............
+..O.f...
+14:47:18.440089 IP 2ba04c7626b7.45772 > 11.248.165.89.8082: Flags [P.], seq 1:213, ack 1, win 507, options [nop,nop,TS val 2277527445 ecr 1712463611], length 212
+E...&.@.@.V7	......Y......o\.p"............
+..O.f...GET /api/covers/undefined HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: imageservice.marathon.l4lb.thisdcos.directory:8082
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:18.440285 IP 11.248.165.89.8082 > 2ba04c7626b7.45772: Flags [.], ack 213, win 502, options [nop,nop,TS val 1712463611 ecr 2277527445], length 0
+E..4 N@.>._....Y	........p"...p0...........
+f.....O.
+14:47:18.474875 IP 11.248.165.89.8082 > 2ba04c7626b7.45772: Flags [P.], seq 1:116, ack 213, win 502, options [nop,nop,TS val 1712463646 ecr 2277527445], length 115
+E... O@.>._....Y	........p"...p0.....m.....
+f.....O.HTTP/1.1 404 Not Found
+Date: Sat, 13 Nov 2021 14:47:18 GMT
+Content-type: application/json
+Content-length: 35
+
+
+14:47:18.474899 IP 2ba04c7626b7.45772 > 11.248.165.89.8082: Flags [.], ack 116, win 507, options [nop,nop,TS val 2277527480 ecr 1712463646], length 0
+E..4&.@.@.W
+	......Y......p0.p#Y...........
+..O.f...
+14:47:18.475080 IP 11.248.165.89.8082 > 2ba04c7626b7.45772: Flags [P.], seq 116:151, ack 213, win 502, options [nop,nop,TS val 1712463646 ecr 2277527480], length 35
+E..W P@.>._}...Y	........p#Y..p0...........
+f.....O.{"message":"Invalid country code!"}
+14:47:18.475094 IP 2ba04c7626b7.45772 > 11.248.165.89.8082: Flags [.], ack 151, win 507, options [nop,nop,TS val 2277527480 ecr 1712463646], length 0
+E..4&.@.@.W		......Y......p0.p#|...........
+..O.f...
+14:47:18.475479 IP 2ba04c7626b7.45772 > 11.248.165.89.8082: Flags [F.], seq 213, ack 151, win 507, options [nop,nop,TS val 2277527480 ecr 1712463646], length 0
+E..4&.@.@.W.	......Y......p0.p#|...........
+..O.f...
+14:47:18.475756 IP 11.248.165.89.8082 > 2ba04c7626b7.45772: Flags [F.], seq 151, ack 214, win 502, options [nop,nop,TS val 1712463646 ecr 2277527480], length 0
+E..4 Q@.>._....Y	........p#|..p1...........
+f.....O.
+14:47:18.475805 IP 2ba04c7626b7.45772 > 11.248.165.89.8082: Flags [.], ack 152, win 507, options [nop,nop,TS val 2277527481 ecr 1712463646], length 0
+E..4&.@.@.W.	......Y......p1.p#}...........
+..O.f...
+14:47:18.738232 IP 2ba04c7626b7.3000 > 9.0.2.129.44286: Flags [P.], seq 1:612, ack 19, win 503, options [nop,nop,TS val 2537744719 ecr 1943958042], length 611
+E...vt@.@...	...	.........b(.[.-...........
+.B.Os.r.HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 414
+ETag: W/"19e-otAsDFB5PBph4y+bdqOqfQ"
+Date: Sat, 13 Nov 2021 14:47:18 GMT
+Connection: close
+
+<!DOCTYPE html><html><head><title>Music Recommender</title><link rel="stylesheet" href="/stylesheets/style.css"></head><body><div style="text-align: center"><img src="images/nocover.png"><h1>Nara</h1><h3>alt-J</h3><img src="images/play.png" width="250px"><h4>alt-J's Most Popular Songs</h4><ol><li>Breezeblocks</li><li>Left Hand Free</li><li>U&amp;ME</li><li>Fitzpleasure</li><li>Taro</li></ol></div></body></html>
+14:47:18.738295 IP 9.0.2.129.44286 > 2ba04c7626b7.3000: Flags [.], ack 612, win 503, options [nop,nop,TS val 1943958395 ecr 2537744719], length 0
+E..4@.@.@...	...	........[.-..d......*.....
+s.s{.B.O
+14:47:18.738393 IP 9.0.2.129.44286 > 2ba04c7626b7.3000: Flags [R.], seq 19, ack 612, win 503, options [nop,nop,TS val 1943958395 ecr 2537744719], length 0
+E..4@.@.@...	...	........[.-..d......*.....
+s.s{.B.O
+14:47:20.493431 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 1362:1589, ack 42799, win 512, options [nop,nop,TS val 1014174723 ecr 4162553721], length 227
+E...].@.>...,...	........k.....\....9......
+<s.....yGET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:20.495104 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 42799:49639, ack 1589, win 6146, options [nop,nop,TS val 4162558720 ecr 1014174723], length 6840
+E.....@.@.[I	...,..........\.k.y....R......
+....<s..HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-1N4yVqtFAqK0/Frb34QH3A"
+Date: Sat, 13 Nov 2021 14:47:20 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.8490240000006 1636814834196
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.71592499999949 1636814834196
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.5649490000003 1636814834196
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47841280 1636814834197
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814834197
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814834197
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814834197
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000421569 1636814834197
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814834197
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814834197
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814834197
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814834197
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814834197
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21410760 1636814834197
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 183668 1636814834197
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814834197
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814834197
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814834197
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814834197
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814834197
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 677784 1636814834197
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16001728 1636814834197
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3286816 1636814834197
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814834197
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814834197
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 353896 1636814834197
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814834197
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814834197
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814834197
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814834197
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seco
+14:47:20.495255 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 49639, win 481, options [nop,nop,TS val 1014174725 ecr 4162558720], length 0
+E..4].@.>...,...	........k.y........8+.....
+<s......
+14:47:20.495275 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 49639:49932, ack 1589, win 6146, options [nop,nop,TS val 4162558720 ecr 1014174723], length 293
+E..Y..@.@.t.	...,............k.y....9P.....
+....<s..nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:20.495344 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 49932, win 506, options [nop,nop,TS val 1014174725 ecr 4162558720], length 0
+E..4].@.>...,...	........k.y../9....8+.....
+<s......
+14:47:25.493514 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 1589:1816, ack 49932, win 512, options [nop,nop,TS val 1014179723 ecr 4162558720], length 227
+E...].@.>...,...	........k.y../9....9......
+<s'.....GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:25.496514 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 49932:56772, ack 1816, win 6146, options [nop,nop,TS val 4162563721 ecr 1014179723], length 6840
+E.....@.@.[C	...,........./9.k.\....R......
+....<s'.HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-IioDXpXC7WnCsK6oppVQ4w"
+Date: Sat, 13 Nov 2021 14:47:25 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9021490000006 1636814844199
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.72057799999949 1636814844199
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6227270000003 1636814844199
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47800320 1636814844200
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814844200
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814844200
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814844200
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000435949 1636814844200
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814844199
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814844199
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814844199
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814844200
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814844200
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21454672 1636814844200
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 154772 1636814844200
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814844200
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814844200
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814844200
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814844200
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814844200
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 653856 1636814844200
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16066240 1636814844200
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3290144 1636814844200
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814844200
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814844200
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 377824 1636814844200
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814844200
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814844200
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814844200
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814844200
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seco
+14:47:25.496695 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 56772, win 481, options [nop,nop,TS val 1014179726 ecr 4162563721], length 0
+E..4].@.>...,...	........k.\..I.....8+.....
+<s'.....
+14:47:25.496713 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 56772:57065, ack 1816, win 6146, options [nop,nop,TS val 4162563721 ecr 1014179723], length 293
+E..Y..@.@.t.	...,.........I..k.\....9P.....
+....<s'.nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:25.496892 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 57065, win 506, options [nop,nop,TS val 1014179727 ecr 4162563721], length 0
+E..4].@.>...,...	........k.\..K.....8+.....
+<s'.....
+14:47:30.493535 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 1816:2043, ack 57065, win 512, options [nop,nop,TS val 1014184723 ecr 4162563721], length 227
+E...].@.>...,...	........k.\..K.....9......
+<s;.....GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:30.496918 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 57065:63905, ack 2043, win 6146, options [nop,nop,TS val 4162568722 ecr 1014184723], length 6840
+E.....@.@.[=	...,.........K..k.?....R......
+....<s;.HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6913
+ETag: W/"1b01-IioDXpXC7WnCsK6oppVQ4w"
+Date: Sat, 13 Nov 2021 14:47:30 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9021490000006 1636814844199
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.72057799999949 1636814844199
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6227270000003 1636814844199
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47800320 1636814844200
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814844200
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814844200
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814844200
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000435949 1636814844200
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814844199
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814844199
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814844199
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814844200
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814844200
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21454672 1636814844200
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 154772 1636814844200
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814844200
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814844200
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814844200
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814844200
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814844200
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 653856 1636814844200
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16066240 1636814844200
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3290144 1636814844200
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814844200
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814844200
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 377824 1636814844200
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814844200
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814844200
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814844200
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814844200
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seco
+14:47:30.497137 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 63905, win 481, options [nop,nop,TS val 1014184727 ecr 4162568722], length 0
+E..4].@.>...,...	........k.?..e.....8+.....
+<s;.....
+14:47:30.497157 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 63905:64198, ack 2043, win 6146, options [nop,nop,TS val 4162568722 ecr 1014184723], length 293
+E..Y..@.@.t.	...,.........e..k.?....9P.....
+....<s;.nds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:30.497333 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 64198, win 506, options [nop,nop,TS val 1014184727 ecr 4162568722], length 0
+E..4].@.>...,...	........k.?..f.....8+.....
+<s;.....
+14:47:35.493435 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 2043:2270, ack 64198, win 512, options [nop,nop,TS val 1014189723 ecr 4162568722], length 227
+E...].@.>...,...	........k.?..f.....9......
+<sN.....GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:35.494995 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 64198:71038, ack 2270, win 6146, options [nop,nop,TS val 4162573720 ecr 1014189723], length 6840
+E.....@.@.[7	...,.........f..k."....R......
+....<sN.HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6911
+ETag: W/"1aff-r6iGBNlbOR8znIxg27tCtg"
+Date: Sat, 13 Nov 2021 14:47:35 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9074720000006 1636814854200
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.7249599999995 1636814854200
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6324320000003 1636814854200
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47378432 1636814854201
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814854201
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814854201
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814854201
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000396959 1636814854201
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814854200
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814854200
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814854200
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814854200
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814854200
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 20872776 1636814854200
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 154772 1636814854200
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814854200
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814854200
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814854200
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814854200
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814854200
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 63680 1636814854200
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16074072 1636814854200
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3290592 1636814854200
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814854200
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814854200
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 968000 1636814854200
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814854200
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814854200
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814854200
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814854200
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_second
+14:47:35.495106 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 71038, win 481, options [nop,nop,TS val 1014189725 ecr 4162573720], length 0
+E..4].@.>...,...	........k."........8+.....
+<sN.....
+14:47:35.495116 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 71038:71329, ack 2270, win 6146, options [nop,nop,TS val 4162573720 ecr 1014189723], length 291
+E..W..@.@.t.	...,............k."....9N.....
+....<sN.s_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:35.495187 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 71329, win 506, options [nop,nop,TS val 1014189725 ecr 4162573720], length 0
+E..4].@.>...,...	........k."........8+.....
+<sN.....
+14:47:40.493486 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 2270:2497, ack 71329, win 512, options [nop,nop,TS val 1014194723 ecr 4162573720], length 227
+E...].@.>...,...	........k."........9......
+<sb#....GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:40.496649 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 71329:78169, ack 2497, win 6146, options [nop,nop,TS val 4162578721 ecr 1014194723], length 6840
+E.....@.@.[1	...,............k......R......
+...!<sb#HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6911
+ETag: W/"1aff-r6iGBNlbOR8znIxg27tCtg"
+Date: Sat, 13 Nov 2021 14:47:40 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9074720000006 1636814854200
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.7249599999995 1636814854200
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6324320000003 1636814854200
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47378432 1636814854201
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814854201
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 110338048 1636814854201
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814854201
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000396959 1636814854201
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814854200
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814854200
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814854200
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814854200
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 26013696 1636814854200
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 20872776 1636814854200
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 154772 1636814854200
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814854200
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814854200
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 4194304 1636814854200
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814854200
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814854200
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 63680 1636814854200
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16074072 1636814854200
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3290592 1636814854200
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 652960 1636814854200
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814854200
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 968000 1636814854200
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814854200
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47680 1636814854200
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1473584 1636814854200
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1471335936 1636814854200
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_second
+14:47:40.496872 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 78169:78460, ack 2497, win 6146, options [nop,nop,TS val 4162578721 ecr 1014194723], length 291
+E..W..@.@.t.	...,............k......9N.....
+...!<sb#s_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:40.496860 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 78169, win 481, options [nop,nop,TS val 1014194727 ecr 4162578721], length 0
+E..4].@.>...,...	........k..........8+.....
+<sb'...!
+14:47:40.497089 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 78460, win 502, options [nop,nop,TS val 1014194727 ecr 4162578721], length 0
+E..4].@.>...,...	........k..........8+.....
+<sb'...!
+14:47:43.674570 IP 9.0.2.129.44744 > 2ba04c7626b7.3000: Flags [S], seq 4217435699, win 64860, options [mss 1380,sackOK,TS val 1943983331 ecr 0,nop,wscale 7], length 0
+E..</#@.@...	...	........`.3.......\.2.....d...
+s...........
+14:47:43.674611 IP 2ba04c7626b7.3000 > 9.0.2.129.44744: Flags [S.], seq 1463561104, ack 4217435700, win 64296, options [mss 1380,sackOK,TS val 2537769655 ecr 1943983331,nop,wscale 7], length 0
+E..<..@.@.#.	...	.......W<+..`.4...(.2.....d...
+.CJ.s.......
+14:47:43.674646 IP 9.0.2.129.44744 > 2ba04c7626b7.3000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1943983331 ecr 2537769655], length 0
+E..4/$@.@...	...	........`.4W<+......*.....
+s....CJ.
+14:47:43.674733 IP 9.0.2.129.44744 > 2ba04c7626b7.3000: Flags [P.], seq 1:588, ack 1, win 507, options [nop,nop,TS val 1943983332 ecr 2537769655], length 587
+E.../%@.@..P	...	........`.4W<+......u.....
+s....CJ.GET /images/nocover.png HTTP/1.1
+host: 172.17.0.4:3001
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+referer: http://172.17.0.4:3001/?title=%22Kal%20Ho%20Naa%20Ho%22&artist=%22sonu%20nigam%22
+accept-encoding: gzip, deflate
+accept-language: en-US,en;q=0.9,he;q=0.8
+if-none-match: W/"1b8b3-17cfaf819c0"
+if-modified-since: Sun, 07 Nov 2021 15:15:36 GMT
+x-forwarded-port: 3001
+x-forwarded-for: 172.17.0.1
+connection: close
+
+
+14:47:43.674750 IP 2ba04c7626b7.3000 > 9.0.2.129.44744: Flags [.], ack 588, win 502, options [nop,nop,TS val 2537769656 ecr 1943983332], length 0
+E..4^.@.@...	...	.......W<+..`.......*.....
+.CJ.s...
+14:47:43.678874 IP 2ba04c7626b7.3000 > 9.0.2.129.44744: Flags [P.], seq 1:240, ack 588, win 502, options [nop,nop,TS val 2537769660 ecr 1943983332], length 239
+E..#^.@.@...	...	.......W<+..`.............
+.CJ.s...HTTP/1.1 304 Not Modified
+X-Powered-By: Express
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Sun, 07 Nov 2021 15:15:36 GMT
+ETag: W/"1b8b3-17cfaf819c0"
+Date: Sat, 13 Nov 2021 14:47:43 GMT
+Connection: close
+
+
+14:47:43.678922 IP 9.0.2.129.44744 > 2ba04c7626b7.3000: Flags [.], ack 240, win 506, options [nop,nop,TS val 1943983336 ecr 2537769660], length 0
+E..4/&@.@...	...	........`..W<,......*.....
+s....CJ.
+14:47:43.679099 IP 2ba04c7626b7.3000 > 9.0.2.129.44744: Flags [F.], seq 240, ack 588, win 502, options [nop,nop,TS val 2537769660 ecr 1943983336], length 0
+E..4^.@.@...	...	.......W<,..`.......*.....
+.CJ.s...
+14:47:43.679134 IP 9.0.2.129.44744 > 2ba04c7626b7.3000: Flags [R.], seq 588, ack 241, win 506, options [nop,nop,TS val 1943983336 ecr 2537769660], length 0
+E..4/'@.@...	...	........`..W<,......*.....
+s....CJ.
+14:47:43.795601 IP 9.0.2.129.44746 > 2ba04c7626b7.3000: Flags [S], seq 2654863700, win 64860, options [mss 1380,sackOK,TS val 1943983452 ecr 0,nop,wscale 7], length 0
+E..<N_@.@..Y	...	........>.T.......\.2.....d...
+s..\........
+14:47:43.795645 IP 2ba04c7626b7.3000 > 9.0.2.129.44746: Flags [S.], seq 2540862029, ack 2654863701, win 64296, options [mss 1380,sackOK,TS val 2537769776 ecr 1943983452,nop,wscale 7], length 0
+E..<..@.@.#.	...	........rzM.>.U...(.2.....d...
+.CK0s..\....
+14:47:43.795719 IP 9.0.2.129.44746 > 2ba04c7626b7.3000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1943983453 ecr 2537769776], length 0
+E..4N`@.@..`	...	........>.U.rzN.....*.....
+s..].CK0
+14:47:43.795823 IP 9.0.2.129.44746 > 2ba04c7626b7.3000: Flags [P.], seq 1:584, ack 1, win 507, options [nop,nop,TS val 1943983453 ecr 2537769776], length 583
+E..{Na@.@...	...	........>.U.rzN.....q.....
+s..].CK0GET /images/play.png HTTP/1.1
+host: 172.17.0.4:3001
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+referer: http://172.17.0.4:3001/?title=%22Kal%20Ho%20Naa%20Ho%22&artist=%22sonu%20nigam%22
+accept-encoding: gzip, deflate
+accept-language: en-US,en;q=0.9,he;q=0.8
+if-none-match: W/"1505-17cfaf819c0"
+if-modified-since: Sun, 07 Nov 2021 15:15:36 GMT
+x-forwarded-port: 3001
+x-forwarded-for: 172.17.0.1
+connection: close
+
+
+14:47:43.795840 IP 2ba04c7626b7.3000 > 9.0.2.129.44746: Flags [.], ack 584, win 502, options [nop,nop,TS val 2537769777 ecr 1943983453], length 0
+E..4..@.@.:.	...	........rzN.>.......*.....
+.CK1s..]
+14:47:43.797405 IP 2ba04c7626b7.3000 > 9.0.2.129.44746: Flags [P.], seq 1:239, ack 584, win 502, options [nop,nop,TS val 2537769778 ecr 1943983453], length 238
+E.."..@.@.9.	...	........rzN.>.............
+.CK2s..]HTTP/1.1 304 Not Modified
+X-Powered-By: Express
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Sun, 07 Nov 2021 15:15:36 GMT
+ETag: W/"1505-17cfaf819c0"
+Date: Sat, 13 Nov 2021 14:47:43 GMT
+Connection: close
+
+
+14:47:43.797457 IP 9.0.2.129.44746 > 2ba04c7626b7.3000: Flags [.], ack 239, win 506, options [nop,nop,TS val 1943983454 ecr 2537769778], length 0
+E..4Nb@.@..^	...	........>...r{<.....*.....
+s..^.CK2
+14:47:43.797610 IP 2ba04c7626b7.3000 > 9.0.2.129.44746: Flags [F.], seq 239, ack 584, win 502, options [nop,nop,TS val 2537769778 ecr 1943983454], length 0
+E..4..@.@.:.	...	........r{<.>.......*.....
+.CK2s..^
+14:47:43.797649 IP 9.0.2.129.44746 > 2ba04c7626b7.3000: Flags [R.], seq 584, ack 239, win 506, options [nop,nop,TS val 1943983454 ecr 2537769778], length 0
+E..4Nc@.@..]	...	........>...r{<.....*.....
+s..^.CK2
+14:47:43.797658 IP 9.0.2.129.44746 > 2ba04c7626b7.3000: Flags [R], seq 2654864284, win 0, length 0
+E..(..@.@.#.	...	........>......P...<...
+14:47:45.493578 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 2497:2724, ack 78460, win 512, options [nop,nop,TS val 1014199723 ecr 4162578721], length 227
+E...^.@.>...,...	........k..........9......
+<su....!GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:45.496339 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 78460:85300, ack 2724, win 6146, options [nop,nop,TS val 4162583721 ecr 1014199723], length 6840
+E.....@.@.[+	...,............k......R......
+....<su.HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6912
+ETag: W/"1b00-MunYkG2LcGoL8BbAEsJi6g"
+Date: Sat, 13 Nov 2021 14:47:45 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9211390000006 1636814864200
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.7258319999995 1636814864200
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6469710000003 1636814864200
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47902720 1636814864201
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814864201
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 111378432 1636814864201
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814864200
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000424152 1636814864200
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814864200
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814864200
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814864200
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814864200
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 27062272 1636814864200
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21396424 1636814864200
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 184978 1636814864200
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814864200
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814864200
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 5242880 1636814864200
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814864200
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814864200
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 549088 1636814864200
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16089136 1636814864200
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3312096 1636814864200
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 654632 1636814864200
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814864200
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 482592 1636814864200
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814864200
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47744 1636814864200
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1472088 1636814864200
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1470287360 1636814864200
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_secon
+14:47:45.496542 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 85300, win 481, options [nop,nop,TS val 1014199726 ecr 4162583721], length 0
+E..4^.@.>...,...	........k.....a....8+.....
+<su.....
+14:47:45.496560 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 85300:85592, ack 2724, win 6146, options [nop,nop,TS val 4162583721 ecr 1014199723], length 292
+E..X..@.@.t.	...,..........a.k......9O.....
+....<su.ds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:45.496710 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 85592, win 480, options [nop,nop,TS val 1014199726 ecr 4162583721], length 0
+E..4^.@.>...,...	........k..........8+.....
+<su.....
+14:47:50.493392 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 2724:2951, ack 85592, win 512, options [nop,nop,TS val 1014204723 ecr 4162583721], length 227
+E...^.@.>...,...	........k..........9......
+<s.3....GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:50.494953 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 85592:92432, ack 2951, win 6146, options [nop,nop,TS val 4162588720 ecr 1014204723], length 6840
+E.....@.@.[%	...,............k......R......
+...0<s.3HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6912
+ETag: W/"1b00-MunYkG2LcGoL8BbAEsJi6g"
+Date: Sat, 13 Nov 2021 14:47:50 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9211390000006 1636814864200
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.7258319999995 1636814864200
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6469710000003 1636814864200
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47902720 1636814864201
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814864201
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 111378432 1636814864201
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814864200
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000424152 1636814864200
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814864200
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814864200
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814864200
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814864200
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 27062272 1636814864200
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21396424 1636814864200
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 184978 1636814864200
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814864200
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814864200
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 5242880 1636814864200
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814864200
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814864200
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 549088 1636814864200
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16089136 1636814864200
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3312096 1636814864200
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 654632 1636814864200
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814864200
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 482592 1636814864200
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814864200
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47744 1636814864200
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1472088 1636814864200
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1470287360 1636814864200
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_secon
+14:47:50.495063 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 92432, win 481, options [nop,nop,TS val 1014204725 ecr 4162588720], length 0
+E..4^.@.>...,...	........k.....=....8+.....
+<s.5...0
+14:47:50.495073 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 92432:92724, ack 2951, win 6146, options [nop,nop,TS val 4162588720 ecr 1014204723], length 292
+E..X..@.@.t.	...,..........=.k......9O.....
+...0<s.3ds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:50.495140 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 92724, win 480, options [nop,nop,TS val 1014204725 ecr 4162588720], length 0
+E..4^.@.>...,...	........k.....a....8+.....
+<s.5...0
+14:47:51.703158 IP 9.0.2.129.44808 > 2ba04c7626b7.3000: Flags [S], seq 1686748546, win 64860, options [mss 1380,sackOK,TS val 1943991360 ecr 0,nop,wscale 7], length 0
+E..<.x@.@..@	...	.......d..........\.2.....d...
+s..@........
+14:47:51.703192 IP 2ba04c7626b7.3000 > 9.0.2.129.44808: Flags [S.], seq 2286975693, ack 1686748547, win 64296, options [mss 1380,sackOK,TS val 2537777684 ecr 1943991360,nop,wscale 7], length 0
+E..<..@.@.#.	...	........Pz.d......(.2.....d...
+.Cj.s..@....
+14:47:51.703220 IP 9.0.2.129.44808 > 2ba04c7626b7.3000: Flags [.], ack 1, win 507, options [nop,nop,TS val 1943991360 ecr 2537777684], length 0
+E..4.y@.@..G	...	.......d....Pz......*.....
+s..@.Cj.
+14:47:51.703440 IP 9.0.2.129.44808 > 2ba04c7626b7.3000: Flags [P.], seq 1:259, ack 1, win 507, options [nop,nop,TS val 1943991360 ecr 2537777684], length 258
+E..6.z@.@..D	...	.......d....Pz......,.....
+s..@.Cj.GET /metrics HTTP/1.1
+Host: 9.0.2.131:3000
+User-Agent: Go-http-client/1.1
+Accept: application/vnd.google.protobuf;proto=io.prometheus.client.MetricFamily;encoding=delimited;q=0.7,text/plain;version=0.0.4;q=0.3
+Accept-Encoding: gzip
+Connection: close
+
+
+14:47:51.703457 IP 2ba04c7626b7.3000 > 9.0.2.129.44808: Flags [.], ack 259, win 502, options [nop,nop,TS val 2537777684 ecr 1943991360], length 0
+E..47>@.@...	...	........Pz.d........*.....
+.Cj.s..@
+14:47:51.705977 IP 2ba04c7626b7.3000 > 9.0.2.129.44808: Flags [P.], seq 1:6841, ack 259, win 502, options [nop,nop,TS val 2537777687 ecr 1943991360], length 6840
+E...7?@.@...	...	........Pz.d.......1......
+.Cj.s..@HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6912
+ETag: W/"1b00-MunYkG2LcGoL8BbAEsJi6g"
+Date: Sat, 13 Nov 2021 14:47:51 GMT
+Connection: close
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9211390000006 1636814864200
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.7258319999995 1636814864200
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6469710000003 1636814864200
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47902720 1636814864201
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814864201
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 111378432 1636814864201
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814864200
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000424152 1636814864200
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814864200
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814864200
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814864200
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814864200
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 27062272 1636814864200
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21396424 1636814864200
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 184978 1636814864200
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814864200
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814864200
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 5242880 1636814864200
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814864200
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814864200
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 549088 1636814864200
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16089136 1636814864200
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3312096 1636814864200
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 654632 1636814864200
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814864200
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 482592 1636814864200
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814864200
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47744 1636814864200
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1472088 1636814864200
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1470287360 1636814864200
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bu
+14:47:51.706036 IP 9.0.2.129.44808 > 2ba04c7626b7.3000: Flags [.], ack 6841, win 481, options [nop,nop,TS val 1943991363 ecr 2537777687], length 0
+E..4.{@.@..E	...	.......d....P.......*.....
+s..C.Cj.
+14:47:51.706051 IP 2ba04c7626b7.3000 > 9.0.2.129.44808: Flags [P.], seq 6841:7128, ack 259, win 502, options [nop,nop,TS val 2537777687 ecr 1943991360], length 287
+E..S7D@.@..]	...	........P..d........I.....
+.Cj.s..@cket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:51.706070 IP 9.0.2.129.44808 > 2ba04c7626b7.3000: Flags [.], ack 7128, win 479, options [nop,nop,TS val 1943991363 ecr 2537777687], length 0
+E..4.|@.@..D	...	.......d....P.......*.....
+s..C.Cj.
+14:47:51.706197 IP 9.0.2.129.44808 > 2ba04c7626b7.3000: Flags [F.], seq 259, ack 7128, win 502, options [nop,nop,TS val 1943991363 ecr 2537777687], length 0
+E..4.}@.@..C	...	.......d....P.......*.....
+s..C.Cj.
+14:47:51.706304 IP 2ba04c7626b7.3000 > 9.0.2.129.44808: Flags [F.], seq 7128, ack 260, win 502, options [nop,nop,TS val 2537777687 ecr 1943991363], length 0
+E..47E@.@..{	...	........P..d........*.....
+.Cj.s..C
+14:47:51.706337 IP 9.0.2.129.44808 > 2ba04c7626b7.3000: Flags [.], ack 7129, win 502, options [nop,nop,TS val 1943991363 ecr 2537777687], length 0
+E..4.~@.@..B	...	.......d....P.......*.....
+s..C.Cj.
+14:47:55.493554 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 2951:3178, ack 92724, win 512, options [nop,nop,TS val 1014209723 ecr 4162588720], length 227
+E...^.@.>...,...	........k.....a....9......
+<s.....0GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:47:55.496452 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 92724:99564, ack 3178, win 6146, options [nop,nop,TS val 4162593721 ecr 1014209723], length 6840
+E.....@.@.[.	...,..........a.k......R......
+..#.<s..HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6912
+ETag: W/"1b00-w1I2QXUgjIbvsEgMQYO4kg"
+Date: Sat, 13 Nov 2021 14:47:55 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9312320000006 1636814874200
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.7261119999995 1636814874200
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6573440000003 1636814874200
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47468544 1636814874201
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814874201
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 111378432 1636814874201
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814874201
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000364524 1636814874201
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814874201
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814874201
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814874201
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814874201
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 27062272 1636814874201
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21025200 1636814874201
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 154771 1636814874201
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814874201
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814874201
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 5242880 1636814874201
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814874201
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814874201
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 170576 1636814874201
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16095976 1636814874201
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3312544 1636814874201
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 654632 1636814874201
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814874201
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 861104 1636814874201
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814874201
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47744 1636814874201
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1472088 1636814874201
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1470287360 1636814874201
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11368
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11366
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_secon
+14:47:55.496617 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 99564, win 481, options [nop,nop,TS val 1014209726 ecr 4162593721], length 0
+E..4^.@.>...,...	........k..........8+.....
+<s....#.
+14:47:55.496634 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 99564:99856, ack 3178, win 6146, options [nop,nop,TS val 4162593721 ecr 1014209723], length 292
+E..X..@.@.t.	...,............k......9O.....
+..#.<s..ds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.310368638000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11368
+
+14:47:55.496785 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 99856, win 506, options [nop,nop,TS val 1014209727 ecr 4162593721], length 0
+E..4^.@.>...,...	........k.....=....8+.....
+<s....#.
+14:47:55.855213 IP 2ba04c7626b7.33913 > 198.51.100.1.53: 9932+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\..@.@.}.	....3d..y.5.H6.&............searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:55.855245 IP 2ba04c7626b7.38070 > 198.51.100.1.53: 5678+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\..@.@.|.	....3d....5.H6..............searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:55.856610 IP 198.51.100.1.53 > 2ba04c7626b7.33913: 9932*- 1/0/0 A 11.212.22.21 (80)
+E..l.2@.@.M..3d.	....5.y.X6!&............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:55.856905 IP 2ba04c7626b7.42336 > 11.212.22.21.8081: Flags [S], seq 1229045335, win 64860, options [mss 1380,sackOK,TS val 1882657388 ecr 0,nop,wscale 7], length 0
+E..<\&@.@..*	........`..IA.W.......\-......d...
+p7.l........
+14:47:55.856938 IP 198.51.100.1.53 > 2ba04c7626b7.38070: 5678*- 1/0/0 A 11.212.22.21 (80)
+E..l.3@.@.M..3d.	....5...X6!.............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:55.857137 IP 11.212.22.21.8081 > 2ba04c7626b7.42336: Flags [S.], seq 16381065, ack 1229045336, win 64296, options [mss 1380,sackOK,TS val 1637671700 ecr 1882657388,nop,wscale 7], length 0
+E..<..@.>..Q....	......`....IA.X...(-......d...
+a...p7.l....
+14:47:55.857160 IP 2ba04c7626b7.42336 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 1882657388 ecr 1637671700], length 0
+E..4\'@.@..1	........`..IA.X........-......
+p7.la...
+14:47:55.857410 IP 2ba04c7626b7.42338 > 11.212.22.21.8081: Flags [S], seq 541150877, win 64860, options [mss 1380,sackOK,TS val 1882657388 ecr 0,nop,wscale 7], length 0
+E..<tk@.@...	........b.. AN........\-......d...
+p7.l........
+14:47:55.857566 IP 11.212.22.21.8081 > 2ba04c7626b7.42338: Flags [S.], seq 2634013953, ack 541150878, win 64296, options [mss 1380,sackOK,TS val 3398410485 ecr 1882657388,nop,wscale 7], length 0
+E..<..@.>..Q....	......b.... AN....(-......d...
+....p7.l....
+14:47:55.857586 IP 2ba04c7626b7.42338 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 1882657388 ecr 3398410485], length 0
+E..4tl@.@...	........b.. AN.........-......
+p7.l....
+14:47:55.857750 IP 2ba04c7626b7.42336 > 11.212.22.21.8081: Flags [P.], seq 1:225, ack 1, win 507, options [nop,nop,TS val 1882657389 ecr 1637671700], length 224
+E...\(@.@..P	........`..IA.X.........r.....
+p7.ma...GET /api/artists/search?artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:55.857868 IP 11.212.22.21.8081 > 2ba04c7626b7.42336: Flags [.], ack 225, win 502, options [nop,nop,TS val 1637671701 ecr 1882657389], length 0
+E..4.n@.>.).....	......`....IA.8....-......
+a...p7.m
+14:47:55.858127 IP 2ba04c7626b7.42338 > 11.212.22.21.8081: Flags [P.], seq 1:235, ack 1, win 507, options [nop,nop,TS val 1882657389 ecr 3398410485], length 234
+E...tm@.@...	........b.. AN..........|.....
+p7.m....GET /api/tracks/search?title=Nara&artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:55.858251 IP 11.212.22.21.8081 > 2ba04c7626b7.42338: Flags [.], ack 235, win 502, options [nop,nop,TS val 3398410486 ecr 1882657389], length 0
+E..4Y.@.>.......	......b.... AO.....-......
+....p7.m
+14:47:55.858669 IP 11.212.22.21.8081 > 2ba04c7626b7.42336: Flags [P.], seq 1:109, ack 225, win 502, options [nop,nop,TS val 1637671701 ecr 1882657389], length 108
+E....o@.>.)}....	......`....IA.8....-......
+a...p7.mHTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:55 GMT
+Content-type: application/json
+Content-length: 46
+
+
+14:47:55.858683 IP 2ba04c7626b7.42336 > 11.212.22.21.8081: Flags [.], ack 109, win 507, options [nop,nop,TS val 1882657390 ecr 1637671701], length 0
+E..4\)@.@../	........`..IA.8........-......
+p7.na...
+14:47:55.858885 IP 11.212.22.21.8081 > 2ba04c7626b7.42336: Flags [P.], seq 109:155, ack 225, win 502, options [nop,nop,TS val 1637671702 ecr 1882657390], length 46
+E..b.p@.>.).....	......`....IA.8....-......
+a...p7.n{"id":"3XHO7cRUPCLOr6jwp8vsx5","name":"alt-J"}
+14:47:55.858895 IP 2ba04c7626b7.42336 > 11.212.22.21.8081: Flags [.], ack 155, win 507, options [nop,nop,TS val 1882657390 ecr 1637671702], length 0
+E..4\*@.@...	........`..IA.8...$....-......
+p7.na...
+14:47:55.859023 IP 2ba04c7626b7.42336 > 11.212.22.21.8081: Flags [F.], seq 225, ack 155, win 507, options [nop,nop,TS val 1882657390 ecr 1637671702], length 0
+E..4\+@.@..-	........`..IA.8...$....-......
+p7.na...
+14:47:55.859434 IP 11.212.22.21.8081 > 2ba04c7626b7.42336: Flags [F.], seq 155, ack 226, win 502, options [nop,nop,TS val 1637671702 ecr 1882657390], length 0
+E..4.q@.>.).....	......`...$IA.9....-......
+a...p7.n
+14:47:55.859454 IP 2ba04c7626b7.42336 > 11.212.22.21.8081: Flags [.], ack 156, win 507, options [nop,nop,TS val 1882657390 ecr 1637671702], length 0
+E..4\,@.@..,	........`..IA.9...%....-......
+p7.na...
+14:47:55.860212 IP 2ba04c7626b7.45346 > 198.51.100.1.53: 7215+ A? chartservice.marathon.l4lb.thisdcos.directory. (63)
+E..[..@.@.|.	....3d..".5.G6../...........chartservice.marathon.l4lb.thisdcos	directory.....
+14:47:55.860901 IP 198.51.100.1.53 > 2ba04c7626b7.45346: 7215*- 1/0/0 A 11.230.177.124 (79)
+E..k.4@.@.M..3d.	....5.".W6 ./...........chartservice.marathon.l4lb.thisdcos	directory....................|
+14:47:55.861318 IP 2ba04c7626b7.37918 > 11.230.177.124.8083: Flags [S], seq 714587866, win 64860, options [mss 1380,sackOK,TS val 1357950935 ecr 0,nop,wscale 7], length 0
+E..<~[@.@..{	......|....*..........\.......d...
+P...........
+14:47:55.861525 IP 11.230.177.124.8083 > 2ba04c7626b7.37918: Flags [S.], seq 303169480, ack 714587867, win 64296, options [mss 1380,sackOK,TS val 4060730789 ecr 1357950935,nop,wscale 7], length 0
+E..<..@.>.s....|	...........*......(.......d...
+.	..P.......
+14:47:55.861547 IP 2ba04c7626b7.37918 > 11.230.177.124.8083: Flags [.], ack 1, win 507, options [nop,nop,TS val 1357950935 ecr 4060730789], length 0
+E..4~\@.@...	......|....*..................
+P....	..
+14:47:55.861677 IP 2ba04c7626b7.37918 > 11.230.177.124.8083: Flags [P.], seq 1:226, ack 1, win 507, options [nop,nop,TS val 1357950936 ecr 4060730789], length 225
+E...~]@.@...	......|....*..................
+P....	..GET /api/charts/3XHO7cRUPCLOr6jwp8vsx5 HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: chartservice.marathon.l4lb.thisdcos.directory:8083
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:55.861764 IP 11.230.177.124.8083 > 2ba04c7626b7.37918: Flags [.], ack 226, win 502, options [nop,nop,TS val 4060730790 ecr 1357950936], length 0
+E..4.A@.>......|	...........*..............
+.	..P...
+14:47:55.864156 IP 11.230.177.124.8083 > 2ba04c7626b7.37918: Flags [P.], seq 1:110, ack 226, win 502, options [nop,nop,TS val 4060730792 ecr 1357950936], length 109
+E....B@.>../...|	...........*........x.....
+.	..P...HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:55 GMT
+Content-type: application/json
+Content-length: 352
+
+
+14:47:55.864182 IP 2ba04c7626b7.37918 > 11.230.177.124.8083: Flags [.], ack 110, win 507, options [nop,nop,TS val 1357950938 ecr 4060730792], length 0
+E..4~^@.@...	......|....*......6...........
+P....	..
+14:47:55.864281 IP 11.230.177.124.8083 > 2ba04c7626b7.37918: Flags [P.], seq 110:462, ack 226, win 502, options [nop,nop,TS val 4060730792 ecr 1357950938], length 352
+E....C@.>..;...|	..........6*........k.....
+.	..P...[{"artists":"alt-J","id":"3Wu6MhnZuLuzfH5wFC2g9i","title":"Breezeblocks"},{"artists":"alt-J","id":"6jXJmMCmEXC8SmZTK0KId6","title":"Left Hand Free"},{"artists":"alt-J","id":"4UoZigJdqn8y8jmMzuvmLd","title":"U&ME"},{"artists":"alt-J","id":"09BGE23vqmtylTUBEhzu2H","title":"Fitzpleasure"},{"artists":"alt-J","id":"7EDMvrb5PA5TP0VQ8z9p82","title":"Taro"}]
+14:47:55.864291 IP 2ba04c7626b7.37918 > 11.230.177.124.8083: Flags [.], ack 462, win 505, options [nop,nop,TS val 1357950938 ecr 4060730792], length 0
+E..4~_@.@...	......|....*..................
+P....	..
+14:47:55.864550 IP 11.230.177.124.8083 > 2ba04c7626b7.37918: Flags [F.], seq 462, ack 226, win 502, options [nop,nop,TS val 4060730792 ecr 1357950938], length 0
+E..4.D@.>......|	...........*..............
+.	..P...
+14:47:55.864556 IP 2ba04c7626b7.37918 > 11.230.177.124.8083: Flags [F.], seq 226, ack 462, win 505, options [nop,nop,TS val 1357950938 ecr 4060730792], length 0
+E..4~`@.@..~	......|....*..................
+P....	..
+14:47:55.864653 IP 11.230.177.124.8083 > 2ba04c7626b7.37918: Flags [.], ack 227, win 502, options [nop,nop,TS val 4060730792 ecr 1357950938], length 0
+E..4.E@.>......|	...........*..............
+.	..P...
+14:47:55.864668 IP 2ba04c7626b7.37918 > 11.230.177.124.8083: Flags [.], ack 463, win 505, options [nop,nop,TS val 1357950938 ecr 4060730792], length 0
+E..4~a@.@..}	......|....*..................
+P....	..
+14:47:55.931063 IP 11.212.22.21.8081 > 2ba04c7626b7.42338: Flags [P.], seq 1:108, ack 235, win 502, options [nop,nop,TS val 3398410559 ecr 1882657389], length 107
+E...Y.@.>..h....	......b.... AO.....-......
+...?p7.mHTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:55 GMT
+Content-type: application/json
+Content-length: 2
+
+
+14:47:55.931086 IP 2ba04c7626b7.42338 > 11.212.22.21.8081: Flags [.], ack 108, win 507, options [nop,nop,TS val 1882657462 ecr 3398410559], length 0
+E..4tn@.@...	........b.. AO....m....-......
+p7.....?
+14:47:55.931231 IP 11.212.22.21.8081 > 2ba04c7626b7.42338: Flags [P.], seq 108:110, ack 235, win 502, options [nop,nop,TS val 3398410559 ecr 1882657462], length 2
+E..6Y.@.>.......	......b...m AO.....-......
+...?p7..{}
+14:47:55.931243 IP 2ba04c7626b7.42338 > 11.212.22.21.8081: Flags [.], ack 110, win 507, options [nop,nop,TS val 1882657462 ecr 3398410559], length 0
+E..4to@.@...	........b.. AO....o....-......
+p7.....?
+14:47:55.931768 IP 2ba04c7626b7.42338 > 11.212.22.21.8081: Flags [F.], seq 235, ack 110, win 507, options [nop,nop,TS val 1882657463 ecr 3398410559], length 0
+E..4tp@.@...	........b.. AO....o....-......
+p7.....?
+14:47:55.931942 IP 11.212.22.21.8081 > 2ba04c7626b7.42338: Flags [F.], seq 110, ack 235, win 502, options [nop,nop,TS val 3398410560 ecr 1882657462], length 0
+E..4Y.@.>.......	......b...o AO.....-......
+...@p7..
+14:47:55.931966 IP 2ba04c7626b7.42338 > 11.212.22.21.8081: Flags [.], ack 111, win 507, options [nop,nop,TS val 1882657463 ecr 3398410560], length 0
+E..4tq@.@...	........b.. AO....p....-......
+p7.....@
+14:47:55.932116 IP 11.212.22.21.8081 > 2ba04c7626b7.42338: Flags [.], ack 236, win 502, options [nop,nop,TS val 3398410560 ecr 1882657463], length 0
+E..4Y.@.>.......	......b...p AO.....-......
+...@p7..
+14:47:55.932912 IP 2ba04c7626b7.32915 > 198.51.100.1.53: 41661+ A? imageservice.marathon.l4lb.thisdcos.directory. (63)
+E..[..@.@.|.	....3d....5.G6..............imageservice.marathon.l4lb.thisdcos	directory.....
+14:47:55.933566 IP 198.51.100.1.53 > 2ba04c7626b7.32915: 41661*- 1/0/0 A 11.248.165.89 (79)
+E..k.:@.@.M..3d.	....5...W6 .............imageservice.marathon.l4lb.thisdcos	directory....................Y
+14:47:55.933897 IP 2ba04c7626b7.46316 > 11.248.165.89.8082: Flags [S], seq 130097772, win 64860, options [mss 1380,sackOK,TS val 2277564939 ecr 0,nop,wscale 7], length 0
+E..<G+@.@.6.	......Y......"l.......\.......d...
+............
+14:47:55.934073 IP 11.248.165.89.8082 > 2ba04c7626b7.46316: Flags [S.], seq 729059694, ack 130097773, win 64296, options [mss 1380,sackOK,TS val 719197771 ecr 2277564939,nop,wscale 7], length 0
+E..<..@.>......Y	.......+t.n.."m...(.......d...
+*..K........
+14:47:55.934095 IP 2ba04c7626b7.46316 > 11.248.165.89.8082: Flags [.], ack 1, win 507, options [nop,nop,TS val 2277564939 ecr 719197771], length 0
+E..4G,@.@.6.	......Y......"m+t.o...........
+....*..K
+14:47:55.934224 IP 2ba04c7626b7.46316 > 11.248.165.89.8082: Flags [P.], seq 1:213, ack 1, win 507, options [nop,nop,TS val 2277564939 ecr 719197771], length 212
+E...G-@.@.5.	......Y......"m+t.o...........
+....*..KGET /api/covers/undefined HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: imageservice.marathon.l4lb.thisdcos.directory:8082
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:55.934370 IP 11.248.165.89.8082 > 2ba04c7626b7.46316: Flags [.], ack 213, win 502, options [nop,nop,TS val 719197771 ecr 2277564939], length 0
+E..4..@.>..,...Y	.......+t.o..#A...........
+*..K....
+14:47:56.028077 IP 11.248.165.89.8082 > 2ba04c7626b7.46316: Flags [P.], seq 1:116, ack 213, win 502, options [nop,nop,TS val 719197865 ecr 2277564939], length 115
+E.....@.>......Y	.......+t.o..#A.....m.....
+*.......HTTP/1.1 404 Not Found
+Date: Sat, 13 Nov 2021 14:47:56 GMT
+Content-type: application/json
+Content-length: 35
+
+
+14:47:56.028107 IP 2ba04c7626b7.46316 > 11.248.165.89.8082: Flags [.], ack 116, win 507, options [nop,nop,TS val 2277565033 ecr 719197865], length 0
+E..4G.@.@.6.	......Y......#A+t.............
+...i*...
+14:47:56.028286 IP 11.248.165.89.8082 > 2ba04c7626b7.46316: Flags [P.], seq 116:151, ack 213, win 502, options [nop,nop,TS val 719197865 ecr 2277565033], length 35
+E..W..@.>......Y	.......+t....#A...........
+*......i{"message":"Invalid country code!"}
+14:47:56.028298 IP 2ba04c7626b7.46316 > 11.248.165.89.8082: Flags [.], ack 151, win 507, options [nop,nop,TS val 2277565033 ecr 719197865], length 0
+E..4G/@.@.6.	......Y......#A+t.............
+...i*...
+14:47:56.028737 IP 2ba04c7626b7.46316 > 11.248.165.89.8082: Flags [F.], seq 213, ack 151, win 507, options [nop,nop,TS val 2277565034 ecr 719197865], length 0
+E..4G0@.@.6.	......Y......#A+t.............
+...j*...
+14:47:56.028911 IP 11.248.165.89.8082 > 2ba04c7626b7.46316: Flags [F.], seq 151, ack 213, win 502, options [nop,nop,TS val 719197866 ecr 2277565033], length 0
+E..4..@.>..)...Y	.......+t....#A...........
+*......i
+14:47:56.028944 IP 2ba04c7626b7.46316 > 11.248.165.89.8082: Flags [.], ack 152, win 507, options [nop,nop,TS val 2277565034 ecr 719197866], length 0
+E..4G1@.@.6.	......Y......#B+t.............
+...j*...
+14:47:56.029130 IP 11.248.165.89.8082 > 2ba04c7626b7.46316: Flags [.], ack 214, win 502, options [nop,nop,TS val 719197866 ecr 2277565034], length 0
+E..4..@.>..(...Y	.......+t....#B...........
+*......j
+14:48:00.493531 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [P.], seq 3178:3405, ack 99856, win 512, options [nop,nop,TS val 1014214723 ecr 4162593721], length 227
+E...^	@.>...,...	........k.....=....9......
+<s.C..#.GET /metrics HTTP/1.1
+Host: frontend.marathon.l4lb.thisdcos.directory:3000
+User-Agent: Prometheus/2.3.2
+Accept: text/plain;version=0.0.4;q=1,*/*;q=0.1
+Accept-Encoding: gzip
+X-Prometheus-Scrape-Timeout-Seconds: 5.000000
+
+
+14:48:00.497147 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 99856:106696, ack 3405, win 6146, options [nop,nop,TS val 4162598722 ecr 1014214723], length 6840
+E.....@.@.[.	...,..........=.k......R......
+..7B<s.CHTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6912
+ETag: W/"1b00-VJ2c0Evh9UwIZ2V0ymzyaw"
+Date: Sat, 13 Nov 2021 14:48:00 GMT
+Connection: keep-alive
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 681.9312320000006 1636814874200
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 112.7261119999995 1636814874200
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 794.6573440000003 1636814874200
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471974
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 47468544 1636814874201
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1232785408 1636814874201
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 111378432 1636814874201
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 13 1636814874201
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000364524 1636814874201
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 3 1636814874201
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814874201
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 4 1636814874201
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814874201
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 27062272 1636814874201
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 21025200 1636814874201
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 154771 1636814874201
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814874201
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 17780736 1636814874201
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 5242880 1636814874201
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814874201
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814874201
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 170576 1636814874201
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 16095976 1636814874201
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3312544 1636814874201
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 654632 1636814874201
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814874201
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 861104 1636814874201
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 545296 1636814874201
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 47744 1636814874201
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1472088 1636814874201
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1470287360 1636814874201
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11369
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11367
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_secon
+14:48:00.497356 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 106696, win 481, options [nop,nop,TS val 1014214727 ecr 4162598722], length 0
+E..4^
+@.>...,...	........k..........8+.....
+<s.G..7B
+14:48:00.497375 IP 2ba04c7626b7.3000 > 44.128.0.2.35226: Flags [P.], seq 106696:106988, ack 3405, win 6146, options [nop,nop,TS val 4162598722 ecr 1014214723], length 292
+E..X..@.@.t.	...,............k......9O.....
+..7B<s.Cds_bucket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 12.311082513000025
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11369
+
+14:48:00.497546 IP 44.128.0.2.35226 > 2ba04c7626b7.3000: Flags [.], ack 106988, win 506, options [nop,nop,TS val 1014214727 ecr 4162598722], length 0
+E..4^.@.>...,...	........k..........8+.....
+<s.G..7B

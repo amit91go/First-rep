@@ -1,0 +1,744 @@
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+14:47:42.679519 IP 9.0.2.129.54004 > 0cc775f8cdf8.3000: Flags [S], seq 623285971, win 64860, options [mss 1380,sackOK,TS val 4187228769 ecr 0,nop,wscale 7], length 0
+E..<M.@.@...	...	.......%&.........\.1.....d...
+..
+a........
+14:47:42.679564 IP 0cc775f8cdf8.3000 > 9.0.2.129.54004: Flags [S.], seq 3526230677, ack 623285972, win 64296, options [mss 1380,sackOK,TS val 3693712145 ecr 4187228769,nop,wscale 7], length 0
+E..<..@.@.#.	...	...........%&.....(.1.....d...
+.)....
+a....
+14:47:42.679601 IP 9.0.2.129.54004 > 0cc775f8cdf8.3000: Flags [.], ack 1, win 507, options [nop,nop,TS val 4187228769 ecr 3693712145], length 0
+E..4M.@.@...	...	.......%&...........).....
+..
+a.)..
+14:47:42.679714 IP 9.0.2.129.54004 > 0cc775f8cdf8.3000: Flags [P.], seq 1:549, ack 1, win 507, options [nop,nop,TS val 4187228770 ecr 3693712145], length 548
+E..XM.@.@...	...	.......%&...........M.....
+..
+b.)..GET /?title=%22Kal%20Ho%20Naa%20Ho%22&artist=%22sonu%20nigam%22 HTTP/1.1
+host: 172.17.0.4:3001
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+accept-encoding: gzip, deflate
+accept-language: en-US,en;q=0.9,he;q=0.8
+x-forwarded-port: 3001
+x-forwarded-for: 172.17.0.1
+connection: close
+
+
+14:47:42.679727 IP 0cc775f8cdf8.3000 > 9.0.2.129.54004: Flags [.], ack 549, win 502, options [nop,nop,TS val 3693712146 ecr 4187228770], length 0
+E..4).@.@...	...	...........%&.......).....
+.)....
+b
+14:47:42.680920 IP 0cc775f8cdf8.59155 > 198.51.100.1.53: 17708+ PTR? 129.2.0.9.in-addr.arpa. (40)
+E..DU[@.@...	....3d....5.05.E,...........129.2.0.9.in-addr.arpa.....
+14:47:42.684936 IP 0cc775f8cdf8.50447 > 198.51.100.1.53: 17056+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\U\@.@..~	....3d....5.H6.B............searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:42.685195 IP 0cc775f8cdf8.51806 > 198.51.100.1.53: 21698+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\U]@.@..}	....3d..^.5.H6.T............searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:42.685721 IP 198.51.100.1.53 > 0cc775f8cdf8.50447: 17056*- 1/0/0 A 11.212.22.21 (80)
+E..l.g@.@.<c.3d.	....5...X6 B............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:42.686109 IP 0cc775f8cdf8.53462 > 11.212.22.21.8081: Flags [S], seq 1026618466, win 64860, options [mss 1380,sackOK,TS val 3144530013 ecr 0,nop,wscale 7], length 0
+E..</.@.@...	...........=0.b.......\-......d...
+.m.]........
+14:47:42.686420 IP 11.212.22.21.8081 > 0cc775f8cdf8.53462: Flags [S.], seq 3455315123, ack 1026618467, win 64296, options [mss 1380,sackOK,TS val 1637658529 ecr 3144530013,nop,wscale 7], length 0
+E..<..@.>..R....	...........=0.c...(-......d...
+a....m.]....
+14:47:42.686452 IP 0cc775f8cdf8.53462 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 3144530013 ecr 1637658529], length 0
+E..4/.@.@...	...........=0.c........-......
+.m.]a...
+14:47:42.686519 IP 198.51.100.1.53 > 0cc775f8cdf8.51806: 21698*- 1/0/0 A 11.212.22.21 (80)
+E..l.h@.@.<b.3d.	....5.^.X6 T............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:42.686703 IP 0cc775f8cdf8.53462 > 11.212.22.21.8081: Flags [P.], seq 1:238, ack 1, win 507, options [nop,nop,TS val 3144530014 ecr 1637658529], length 237
+E..!/.@.@...	...........=0.c.........~.....
+.m.^a...GET /api/artists/search?artist=%22sonu%20nigam%22 HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:42.686956 IP 11.212.22.21.8081 > 0cc775f8cdf8.53462: Flags [.], ack 238, win 502, options [nop,nop,TS val 1637658530 ecr 3144530014], length 0
+E..4h:@.>.......	...........=0.P....-......
+a....m.^
+14:47:42.687163 IP 0cc775f8cdf8.53464 > 11.212.22.21.8081: Flags [S], seq 3865887545, win 64860, options [mss 1380,sackOK,TS val 3144530014 ecr 0,nop,wscale 7], length 0
+E..<=.@.@..F	............l.9.......\-......d...
+.m.^........
+14:47:42.687468 IP 11.212.22.21.8081 > 0cc775f8cdf8.53464: Flags [S.], seq 2046746692, ack 3865887546, win 64296, options [mss 1380,sackOK,TS val 3398397315 ecr 3144530014,nop,wscale 7], length 0
+E..<..@.>..R....	.......y..D.l.:...(-......d...
+..m..m.^....
+14:47:42.687496 IP 0cc775f8cdf8.53464 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 3144530014 ecr 3398397315], length 0
+E..4=.@.@..M	............l.:y..E....-......
+.m.^..m.
+14:47:42.687760 IP 0cc775f8cdf8.53464 > 11.212.22.21.8081: Flags [P.], seq 1:269, ack 1, win 507, options [nop,nop,TS val 3144530015 ecr 3398397315], length 268
+E..@=.@.@..@	............l.:y..E...........
+.m._..m.GET /api/tracks/search?title=%22Kal%20Ho%20Naa%20Ho%22&artist=%22sonu%20nigam%22 HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:42.687966 IP 11.212.22.21.8081 > 0cc775f8cdf8.53464: Flags [.], ack 269, win 502, options [nop,nop,TS val 3398397316 ecr 3144530015], length 0
+E..4.k@.>.8.....	.......y..E.l.F....-......
+..m..m._
+14:47:42.692851 IP 198.51.100.1.53 > 0cc775f8cdf8.59155: 17708 NXDomain 0/1/0 (94)
+E..z.i@.@.<S.3d.	....5...f6.E,...........129.2.0.9.in-addr.arpa................*.z.arin.net..dns-ops.6x:...........
+....*0
+14:47:42.693668 IP 0cc775f8cdf8.41591 > 198.51.100.1.53: 16754+ PTR? 1.100.51.198.in-addr.arpa. (43)
+E..GU_@.@...	....3d..w.5.35.Ar...........1.100.51.198.in-addr.arpa.....
+14:47:42.704754 IP 198.51.100.1.53 > 0cc775f8cdf8.41591: 16754 NXDomain 0/1/0 (97)
+E..}.j@.@.<O.3d.	....5.w.i61Ar...........1.100.51.198.in-addr.arpa................*.z.arin.net..dns-ops.9x9y..........
+....*0
+14:47:42.705415 IP 0cc775f8cdf8.35285 > 198.51.100.1.53: 28567+ PTR? 21.22.212.11.in-addr.arpa. (43)
+E..GUa@.@...	....3d....5.35.o............21.22.212.11.in-addr.arpa.....
+14:47:42.716973 IP 198.51.100.1.53 > 0cc775f8cdf8.35285: 28567 NXDomain 0/1/0 (111)
+E....l@.@.<?.3d.	....5...w6?o............21.22.212.11.in-addr.arpa................8.b.in-addr-servers.!.nstld.iana.org.xw...........	:.....
+14:47:42.932907 IP 11.212.22.21.8081 > 0cc775f8cdf8.53462: Flags [P.], seq 1:109, ack 238, win 502, options [nop,nop,TS val 1637658776 ecr 3144530014], length 108
+E...h;@.>.......	...........=0.P....-......
+a....m.^HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:42 GMT
+Content-type: application/json
+Content-length: 51
+
+
+14:47:42.932959 IP 0cc775f8cdf8.53462 > 11.212.22.21.8081: Flags [.], ack 109, win 507, options [nop,nop,TS val 3144530260 ecr 1637658776], length 0
+E..4/.@.@...	...........=0.P... ....-......
+.m.Ta...
+14:47:42.933205 IP 11.212.22.21.8081 > 0cc775f8cdf8.53462: Flags [P.], seq 109:160, ack 238, win 502, options [nop,nop,TS val 1637658776 ecr 3144530260], length 51
+E..gh<@.>.......	.......... =0.P....-......
+a....m.T{"id":"1dVygo6tRFXC8CSWURQJq2","name":"Sonu Nigam"}
+14:47:42.933236 IP 0cc775f8cdf8.53462 > 11.212.22.21.8081: Flags [.], ack 160, win 507, options [nop,nop,TS val 3144530260 ecr 1637658776], length 0
+E..4/.@.@...	...........=0.P...S....-......
+.m.Ta...
+14:47:42.933737 IP 0cc775f8cdf8.53462 > 11.212.22.21.8081: Flags [F.], seq 238, ack 160, win 507, options [nop,nop,TS val 3144530261 ecr 1637658776], length 0
+E..4/.@.@...	...........=0.P...S....-......
+.m.Ua...
+14:47:42.933979 IP 11.212.22.21.8081 > 0cc775f8cdf8.53462: Flags [F.], seq 160, ack 238, win 502, options [nop,nop,TS val 1637658777 ecr 3144530260], length 0
+E..4h=@.>.......	..........S=0.P....-......
+a....m.T
+14:47:42.934014 IP 0cc775f8cdf8.53462 > 11.212.22.21.8081: Flags [.], ack 161, win 507, options [nop,nop,TS val 3144530261 ecr 1637658777], length 0
+E..4/.@.@...	...........=0.Q...T....-......
+.m.Ua...
+14:47:42.934212 IP 11.212.22.21.8081 > 0cc775f8cdf8.53462: Flags [.], ack 239, win 502, options [nop,nop,TS val 1637658777 ecr 3144530261], length 0
+E..4h>@.>.......	..........T=0.Q....-......
+a....m.U
+14:47:42.935251 IP 0cc775f8cdf8.47188 > 198.51.100.1.53: 59105+ A? chartservice.marathon.l4lb.thisdcos.directory. (63)
+E..[U.@.@..J	....3d..T.5.G6..............chartservice.marathon.l4lb.thisdcos	directory.....
+14:47:42.936173 IP 198.51.100.1.53 > 0cc775f8cdf8.47188: 59105*- 1/0/0 A 11.230.177.124 (79)
+E..k..@.@.<<.3d.	....5.T.W6..............chartservice.marathon.l4lb.thisdcos	directory....................|
+14:47:42.936555 IP 0cc775f8cdf8.48900 > 11.230.177.124.8083: Flags [S], seq 552442059, win 64860, options [mss 1380,sackOK,TS val 1042634211 ecr 0,nop,wscale 7], length 0
+E..</T@.@.B.	......|.... ..........\.......d...
+>%U.........
+14:47:42.936799 IP 11.230.177.124.8083 > 0cc775f8cdf8.48900: Flags [S.], seq 2921731319, ack 552442060, win 64296, options [mss 1380,sackOK,TS val 4060717865 ecr 1042634211,nop,wscale 7], length 0
+E..<..@.>.s....|	........&.. ......(.......d...
+.	.)>%U.....
+14:47:42.936828 IP 0cc775f8cdf8.48900 > 11.230.177.124.8083: Flags [.], ack 1, win 507, options [nop,nop,TS val 1042634212 ecr 4060717865], length 0
+E..4/U@.@.B.	......|.... ....&.......
+.....
+>%U..	.)
+14:47:42.937040 IP 0cc775f8cdf8.48900 > 11.230.177.124.8083: Flags [P.], seq 1:226, ack 1, win 507, options [nop,nop,TS val 1042634212 ecr 4060717865], length 225
+E.../V@.@.A.	......|.... ....&.............
+>%U..	.)GET /api/charts/1dVygo6tRFXC8CSWURQJq2 HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: chartservice.marathon.l4lb.thisdcos.directory:8083
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:42.937082 IP 0cc775f8cdf8.33193 > 198.51.100.1.53: 45529+ PTR? 124.177.230.11.in-addr.arpa. (45)
+E..IU.@.@..[	....3d....5.55..............124.177.230.11.in-addr.arpa.....
+14:47:42.937230 IP 11.230.177.124.8083 > 0cc775f8cdf8.48900: Flags [.], ack 226, win 502, options [nop,nop,TS val 4060717865 ecr 1042634212], length 0
+E..4..@.>..0...|	........&.. ........
+.....
+.	.)>%U.
+14:47:42.948919 IP 198.51.100.1.53 > 0cc775f8cdf8.33193: 45529 NXDomain 0/1/0 (113)
+E.....@.@.<..3d.	....5...y6A.............124.177.230.11.in-addr.arpa................8.b.in-addr-servers.#.nstld.iana.org.xw...........	:.....
+14:47:43.129608 IP 11.212.22.21.8081 > 0cc775f8cdf8.53464: Flags [P.], seq 1:108, ack 269, win 502, options [nop,nop,TS val 3398397757 ecr 3144530015], length 107
+E....l@.>.8.....	.......y..E.l.F....-......
+..o=.m._HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:43 GMT
+Content-type: application/json
+Content-length: 2
+
+
+14:47:43.129671 IP 0cc775f8cdf8.53464 > 11.212.22.21.8081: Flags [.], ack 108, win 507, options [nop,nop,TS val 3144530456 ecr 3398397757], length 0
+E..4=.@.@..K	............l.Fy.......-......
+.m....o=
+14:47:43.129914 IP 11.212.22.21.8081 > 0cc775f8cdf8.53464: Flags [P.], seq 108:110, ack 269, win 502, options [nop,nop,TS val 3398397758 ecr 3144530456], length 2
+E..6.m@.>.8.....	.......y....l.F....-......
+..o>.m..{}
+14:47:43.129932 IP 0cc775f8cdf8.53464 > 11.212.22.21.8081: Flags [.], ack 110, win 507, options [nop,nop,TS val 3144530457 ecr 3398397758], length 0
+E..4=.@.@..J	............l.Fy.......-......
+.m....o>
+14:47:43.130244 IP 0cc775f8cdf8.53464 > 11.212.22.21.8081: Flags [F.], seq 269, ack 110, win 507, options [nop,nop,TS val 3144530457 ecr 3398397758], length 0
+E..4=.@.@..I	............l.Fy.......-......
+.m....o>
+14:47:43.130595 IP 11.212.22.21.8081 > 0cc775f8cdf8.53464: Flags [F.], seq 110, ack 270, win 502, options [nop,nop,TS val 3398397758 ecr 3144530457], length 0
+E..4.n@.>.8.....	.......y....l.G....-......
+..o>.m..
+14:47:43.130624 IP 0cc775f8cdf8.53464 > 11.212.22.21.8081: Flags [.], ack 111, win 507, options [nop,nop,TS val 3144530457 ecr 3398397758], length 0
+E..4=.@.@..H	............l.Gy.......-......
+.m....o>
+14:47:43.131501 IP 0cc775f8cdf8.57398 > 198.51.100.1.53: 51124+ A? imageservice.marathon.l4lb.thisdcos.directory. (63)
+E..[U.@.@...	....3d..6.5.G6..............imageservice.marathon.l4lb.thisdcos	directory.....
+14:47:43.132242 IP 198.51.100.1.53 > 0cc775f8cdf8.57398: 51124*- 1/0/0 A 11.248.165.89 (79)
+E..k..@.@.<7.3d.	....5.6.W6..............imageservice.marathon.l4lb.thisdcos	directory....................Y
+14:47:43.132574 IP 0cc775f8cdf8.56548 > 11.248.165.89.8082: Flags [S], seq 1882892707, win 64860, options [mss 1380,sackOK,TS val 2233239150 ecr 0,nop,wscale 7], length 0
+E..<$.@.@.X.	......Y....p:.........\.......d...
+...n........
+14:47:43.132786 IP 11.248.165.89.8082 > 0cc775f8cdf8.56548: Flags [S.], seq 2823684490, ack 1882892708, win 64296, options [mss 1380,sackOK,TS val 719184970 ecr 2233239150,nop,wscale 7], length 0
+E..<..@.>......Y	........N..p:.....(.......d...
+*..J...n....
+14:47:43.132803 IP 0cc775f8cdf8.56548 > 11.248.165.89.8082: Flags [.], ack 1, win 507, options [nop,nop,TS val 2233239151 ecr 719184970], length 0
+E..4$.@.@.Y.	......Y....p:...N.............
+...o*..J
+14:47:43.133127 IP 0cc775f8cdf8.56548 > 11.248.165.89.8082: Flags [P.], seq 1:213, ack 1, win 507, options [nop,nop,TS val 2233239151 ecr 719184970], length 212
+E...$.@.@.X/	......Y....p:...N.............
+...o*..JGET /api/covers/undefined HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: imageservice.marathon.l4lb.thisdcos.directory:8082
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:43.133245 IP 11.248.165.89.8082 > 0cc775f8cdf8.56548: Flags [.], ack 213, win 502, options [nop,nop,TS val 719184970 ecr 2233239151], length 0
+E..4Wm@.>.(....Y	........N..p:.x...........
+*..J...o
+14:47:43.133264 IP 0cc775f8cdf8.48616 > 198.51.100.1.53: 29379+ PTR? 89.165.248.11.in-addr.arpa. (44)
+E..HU.@.@..,	....3d....5.45.r............89.165.248.11.in-addr.arpa.....
+14:47:43.144851 IP 198.51.100.1.53 > 0cc775f8cdf8.48616: 29379 NXDomain 0/1/0 (112)
+E.....@.@.<..3d.	....5...x6@r............89.165.248.11.in-addr.arpa................8.b.in-addr-servers.".nstld.iana.org.xw...........	:.....
+14:47:43.169473 IP 11.248.165.89.8082 > 0cc775f8cdf8.56548: Flags [P.], seq 1:116, ack 213, win 502, options [nop,nop,TS val 719185006 ecr 2233239151], length 115
+E...Wn@.>.(....Y	........N..p:.x.....l.....
+*..n...oHTTP/1.1 404 Not Found
+Date: Sat, 13 Nov 2021 14:47:43 GMT
+Content-type: application/json
+Content-length: 35
+
+
+14:47:43.169493 IP 0cc775f8cdf8.56548 > 11.248.165.89.8082: Flags [.], ack 116, win 507, options [nop,nop,TS val 2233239187 ecr 719185006], length 0
+E..4$.@.@.Y.	......Y....p:.x.N.............
+....*..n
+14:47:43.169626 IP 11.248.165.89.8082 > 0cc775f8cdf8.56548: Flags [P.], seq 116:151, ack 213, win 502, options [nop,nop,TS val 719185006 ecr 2233239187], length 35
+E..WWo@.>.(_...Y	........N..p:.x...........
+*..n....{"message":"Invalid country code!"}
+14:47:43.169637 IP 0cc775f8cdf8.56548 > 11.248.165.89.8082: Flags [.], ack 151, win 507, options [nop,nop,TS val 2233239187 ecr 719185006], length 0
+E..4$.@.@.Y.	......Y....p:.x.N.!...........
+....*..n
+14:47:43.169985 IP 0cc775f8cdf8.56548 > 11.248.165.89.8082: Flags [F.], seq 213, ack 151, win 507, options [nop,nop,TS val 2233239188 ecr 719185006], length 0
+E..4$.@.@.Y.	......Y....p:.x.N.!...........
+....*..n
+14:47:43.170188 IP 11.248.165.89.8082 > 0cc775f8cdf8.56548: Flags [F.], seq 151, ack 214, win 502, options [nop,nop,TS val 719185007 ecr 2233239188], length 0
+E..4Wp@.>.(....Y	........N.!p:.y...........
+*..o....
+14:47:43.170205 IP 0cc775f8cdf8.56548 > 11.248.165.89.8082: Flags [.], ack 152, win 507, options [nop,nop,TS val 2233239188 ecr 719185007], length 0
+E..4$.@.@.X.	......Y....p:.y.N."...........
+....*..o
+14:47:43.232482 IP 11.230.177.124.8083 > 0cc775f8cdf8.48900: Flags [P.], seq 1:111, ack 226, win 502, options [nop,nop,TS val 4060718160 ecr 1042634212], length 110
+E.....@.>......|	........&.. ........x.....
+.	.P>%U.HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:43 GMT
+Content-type: application/json
+Content-length: 1307
+
+
+14:47:43.232520 IP 0cc775f8cdf8.48900 > 11.230.177.124.8083: Flags [.], ack 111, win 507, options [nop,nop,TS val 1042634507 ecr 4060718160], length 0
+E..4/W@.@.B.	......|.... ....&.f.....
+.....
+>%W..	.P
+14:47:43.232645 IP 11.230.177.124.8083 > 0cc775f8cdf8.48900: Flags [P.], seq 111:1418, ack 226, win 502, options [nop,nop,TS val 4060718160 ecr 1042634507], length 1307
+E..O..@.>......|	........&.f ........%.....
+.	.P>%W.[{"artists":"Arya Acharya, Aastha Gill, Amaal Mallik, Ankit Tiwari, Arijit Singh, Badshah, Darshan Raval, Dev Negi, Dhvani Bhanushali, Divya Kumar, Guru Randhawa, Ikka, Jassie Gill, Jubin Nautiyal, Mika Singh, Neha Kakkar, Shreya Ghoshal, Sonu Nigam, Tulsi Kumar, Yo Yo Honey Singh, Aman Hayer, Amit Trivedi, Anand Raj Anand, Anu Malik, Arko, Goldboy, Gourov-Roshin, Haji Springer, Himesh Reshammiya, Millind Gaba, Mithoon, Music Mg, Panjabi MC, Preet Hundal, Rajat Nagpal, Rochak Kohli, Sachin-Jigar, Sanjay Leela Bhansali, Sukh-E Muzical Doctorz, Tanishk Bagchi, Vee, Zack Knight","id":"1FSYDJAlyHAabWhiGgYfDq","title":"52 Non Stop Dilbar Dilbar Remix(Remix By Kedrock,Sd Style)"},{"artists":"Shankar-Ehsaan-Loy, Sonu Nigam","id":"251PNRmJU9KcUnFQAB5t6I","title":"Kal Ho Naa Ho"},{"artists":"Sonu Nigam, Shreya Ghoshal","id":"3WVHfTd7xz9VPYJQFpOp8j","title":"Main Agar Kahoon"},{"artists":"Mithoon, Atif Aslam, Armaan Malik, Arijit Singh, Amaal Mallik, Salman Khan, Mohit Chauhan, Yo Yo Honey Singh, Ankit Tiwari, Sonu Nigam, Neeti Mohan, Sabri Brothers, Tulsi Kumar, Rashmi Virag, Dj Chetas","id":"42WGQxg2lPIFBt8ZRHQ4Q4","title":"Romantic Mashup 2"},{"artists":"Jatin-Lalit, Amit Kumar, Sonu Nigam, Alka Yagnik, Udit Narayan, Kavita Krishnamurthy","id":"1uzkWkIaWaxzHJgJ4Fy5rO","title":"Bole Chudiyan"}]
+14:47:43.232652 IP 0cc775f8cdf8.48900 > 11.230.177.124.8083: Flags [.], ack 1418, win 502, options [nop,nop,TS val 1042634507 ecr 4060718160], length 0
+E..4/X@.@.B.	......|.... ....&.......
+.....
+>%W..	.P
+14:47:43.232981 IP 11.230.177.124.8083 > 0cc775f8cdf8.48900: Flags [F.], seq 1418, ack 226, win 502, options [nop,nop,TS val 4060718161 ecr 1042634507], length 0
+E..4..@.>..-...|	........&.. ........
+.....
+.	.Q>%W.
+14:47:43.233000 IP 0cc775f8cdf8.48900 > 11.230.177.124.8083: Flags [F.], seq 226, ack 1418, win 502, options [nop,nop,TS val 1042634508 ecr 4060718160], length 0
+E..4/Y@.@.B.	......|.... ....&.......
+.....
+>%W..	.P
+14:47:43.233122 IP 11.230.177.124.8083 > 0cc775f8cdf8.48900: Flags [.], ack 227, win 502, options [nop,nop,TS val 4060718161 ecr 1042634508], length 0
+E..4..@.>..,...|	........&.. ........
+.....
+.	.Q>%W.
+14:47:43.233136 IP 0cc775f8cdf8.48900 > 11.230.177.124.8083: Flags [.], ack 1419, win 502, options [nop,nop,TS val 1042634508 ecr 4060718161], length 0
+E..4/Z@.@.B.	......|.... ....&.......
+.....
+>%W..	.Q
+14:47:43.533242 IP 0cc775f8cdf8.3000 > 9.0.2.129.54004: Flags [P.], seq 1:734, ack 549, win 502, options [nop,nop,TS val 3693712999 ecr 4187228770], length 733
+E...).@.@...	...	...........%&.............
+.).g..
+bHTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 536
+ETag: W/"218-sNVdmvZ6ow9EqantmLOUFw"
+Date: Sat, 13 Nov 2021 14:47:43 GMT
+Connection: close
+
+<!DOCTYPE html><html><head><title>Music Recommender</title><link rel="stylesheet" href="/stylesheets/style.css"></head><body><div style="text-align: center"><img src="images/nocover.png"><h1>&quot;Kal Ho Naa Ho&quot;</h1><h3>&quot;sonu nigam&quot;</h3><img src="images/play.png" width="250px"><h4>&quot;sonu nigam&quot;'s Most Popular Songs</h4><ol><li>52 Non Stop Dilbar Dilbar Remix(Remix By Kedrock,Sd Style)</li><li>Kal Ho Naa Ho</li><li>Main Agar Kahoon</li><li>Romantic Mashup 2</li><li>Bole Chudiyan</li></ol></div></body></html>
+14:47:43.533313 IP 9.0.2.129.54004 > 0cc775f8cdf8.3000: Flags [.], ack 734, win 502, options [nop,nop,TS val 4187229623 ecr 3693712999], length 0
+E..4M.@.@...	...	.......%&.....s.....).....
+.....).g
+14:47:43.533540 IP 9.0.2.129.54004 > 0cc775f8cdf8.3000: Flags [R.], seq 549, ack 734, win 502, options [nop,nop,TS val 4187229623 ecr 3693712999], length 0
+E..4M.@.@...	...	.......%&.....s.....).....
+.....).g
+14:47:43.674570 IP 9.0.2.129.54036 > 0cc775f8cdf8.3000: Flags [S], seq 4075692755, win 64860, options [mss 1380,sackOK,TS val 4187229764 ecr 0,nop,wscale 7], length 0
+E..<q.@.@...	...	........."........\.1.....d...
+...D........
+14:47:43.674629 IP 0cc775f8cdf8.3000 > 9.0.2.129.54036: Flags [S.], seq 463940571, ack 4075692756, win 64296, options [mss 1380,sackOK,TS val 3693713140 ecr 4187229764,nop,wscale 7], length 0
+E..<..@.@.#.	...	.........+..."....(.1.....d...
+.).....D....
+14:47:43.674679 IP 9.0.2.129.54036 > 0cc775f8cdf8.3000: Flags [.], ack 1, win 507, options [nop,nop,TS val 4187229764 ecr 3693713140], length 0
+E..4q.@.@...	...	........."...+......).....
+...D.)..
+14:47:43.674797 IP 9.0.2.129.54036 > 0cc775f8cdf8.3000: Flags [P.], seq 1:542, ack 1, win 507, options [nop,nop,TS val 4187229765 ecr 3693713140], length 541
+E..Qq.@.@...	...	........."...+......F.....
+...E.)..GET /stylesheets/style.css HTTP/1.1
+host: 172.17.0.4:3001
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
+accept: text/css,*/*;q=0.1
+referer: http://172.17.0.4:3001/?title=%22Kal%20Ho%20Naa%20Ho%22&artist=%22sonu%20nigam%22
+accept-encoding: gzip, deflate
+accept-language: en-US,en;q=0.9,he;q=0.8
+if-none-match: W/"c0-17cfaf819c0"
+if-modified-since: Sun, 07 Nov 2021 15:15:36 GMT
+x-forwarded-port: 3001
+x-forwarded-for: 172.17.0.1
+connection: close
+
+
+14:47:43.674816 IP 0cc775f8cdf8.3000 > 9.0.2.129.54036: Flags [.], ack 542, win 502, options [nop,nop,TS val 3693713141 ecr 4187229765], length 0
+E..4:W@.@..j	...	.........+...$......).....
+.).....E
+14:47:43.676321 IP 0cc775f8cdf8.3000 > 9.0.2.129.54036: Flags [P.], seq 1:237, ack 542, win 502, options [nop,nop,TS val 3693713142 ecr 4187229765], length 236
+E.. :X@.@..}	...	.........+...$............
+.).....EHTTP/1.1 304 Not Modified
+X-Powered-By: Express
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Sun, 07 Nov 2021 15:15:36 GMT
+ETag: W/"c0-17cfaf819c0"
+Date: Sat, 13 Nov 2021 14:47:43 GMT
+Connection: close
+
+
+14:47:43.676370 IP 9.0.2.129.54036 > 0cc775f8cdf8.3000: Flags [.], ack 237, win 506, options [nop,nop,TS val 4187229766 ecr 3693713142], length 0
+E..4q.@.@...	...	.........$...,......).....
+...F.)..
+14:47:43.676542 IP 0cc775f8cdf8.3000 > 9.0.2.129.54036: Flags [F.], seq 237, ack 542, win 502, options [nop,nop,TS val 3693713142 ecr 4187229766], length 0
+E..4:Y@.@..h	...	.........,...$......).....
+.).....F
+14:47:43.676918 IP 9.0.2.129.54036 > 0cc775f8cdf8.3000: Flags [R.], seq 542, ack 238, win 506, options [nop,nop,TS val 4187229767 ecr 3693713142], length 0
+E..4q.@.@...	...	.........$...,......).....
+...G.)..
+14:47:44.644035 IP 0cc775f8cdf8.42276 > 198.51.100.1.53: 29864+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\V.@.@...	....3d..$.5.H6.t............searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:44.644253 IP 0cc775f8cdf8.55447 > 198.51.100.1.53: 49545+ A? searchservice.marathon.l4lb.thisdcos.directory. (64)
+E..\V.@.@...	....3d....5.H6..............searchservice.marathon.l4lb.thisdcos	directory.....
+14:47:44.644778 IP 198.51.100.1.53 > 0cc775f8cdf8.42276: 29864*- 1/0/0 A 11.212.22.21 (80)
+E..l.A@.@.;..3d.	....5.$.X6 t............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:44.645102 IP 0cc775f8cdf8.53502 > 11.212.22.21.8081: Flags [S], seq 3581156568, win 64860, options [mss 1380,sackOK,TS val 3144531972 ecr 0,nop,wscale 7], length 0
+E..<..@.@.Cr	............t.........\-......d...
+.m..........
+14:47:44.645325 IP 11.212.22.21.8081 > 0cc775f8cdf8.53502: Flags [S.], seq 3218153927, ack 3581156569, win 64296, options [mss 1380,sackOK,TS val 1637660488 ecr 3144531972,nop,wscale 7], length 0
+E..<..@.>..R....	.........!..t.....(-......d...
+a..H.m......
+14:47:44.645351 IP 0cc775f8cdf8.53502 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 3144531972 ecr 1637660488], length 0
+E..4..@.@.Cy	............t....!.....-......
+.m..a..H
+14:47:44.645361 IP 198.51.100.1.53 > 0cc775f8cdf8.55447: 49545*- 1/0/0 A 11.212.22.21 (80)
+E..l.B@.@.;..3d.	....5...X6 .............searchservice.marathon.l4lb.thisdcos	directory.....................
+14:47:44.645620 IP 0cc775f8cdf8.53504 > 11.212.22.21.8081: Flags [S], seq 2657507848, win 64860, options [mss 1380,sackOK,TS val 3144531972 ecr 0,nop,wscale 7], length 0
+E..<'.@.@...	............fZ........\-......d...
+.m..........
+14:47:44.645812 IP 11.212.22.21.8081 > 0cc775f8cdf8.53504: Flags [S.], seq 2853364775, ack 2657507849, win 64296, options [mss 1380,sackOK,TS val 3398399274 ecr 3144531972,nop,wscale 7], length 0
+E..<..@.>..R....	..........'.fZ	...(-......d...
+..u*.m......
+14:47:44.645827 IP 0cc775f8cdf8.53504 > 11.212.22.21.8081: Flags [.], ack 1, win 507, options [nop,nop,TS val 3144531973 ecr 3398399274], length 0
+E..4'.@.@...	............fZ	...(....-......
+.m....u*
+14:47:44.646061 IP 0cc775f8cdf8.53502 > 11.212.22.21.8081: Flags [P.], seq 1:225, ack 1, win 507, options [nop,nop,TS val 3144531973 ecr 1637660488], length 224
+E.....@.@.B.	............t....!......q.....
+.m..a..HGET /api/artists/search?artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:44.646208 IP 11.212.22.21.8081 > 0cc775f8cdf8.53502: Flags [.], ack 225, win 502, options [nop,nop,TS val 1637660489 ecr 3144531973], length 0
+E..4.P@.>.y	....	.........!..t......-......
+a..I.m..
+14:47:44.646466 IP 0cc775f8cdf8.53504 > 11.212.22.21.8081: Flags [P.], seq 1:235, ack 1, win 507, options [nop,nop,TS val 3144531973 ecr 3398399274], length 234
+E...'.@.@...	............fZ	...(.....{.....
+.m....u*GET /api/tracks/search?title=Nara&artist=alt-J HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: searchservice.marathon.l4lb.thisdcos.directory:8081
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:44.646612 IP 11.212.22.21.8081 > 0cc775f8cdf8.53504: Flags [.], ack 235, win 502, options [nop,nop,TS val 3398399274 ecr 3144531973], length 0
+E..4G?@.>.......	..........(.fZ.....-......
+..u*.m..
+14:47:44.656235 IP 11.212.22.21.8081 > 0cc775f8cdf8.53504: Flags [P.], seq 1:108, ack 235, win 502, options [nop,nop,TS val 3398399284 ecr 3144531973], length 107
+E...G@@.>.......	..........(.fZ.....-......
+..u4.m..HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:44 GMT
+Content-type: application/json
+Content-length: 2
+
+
+14:47:44.656255 IP 0cc775f8cdf8.53504 > 11.212.22.21.8081: Flags [.], ack 108, win 507, options [nop,nop,TS val 3144531983 ecr 3398399284], length 0
+E..4'.@.@...	............fZ.........-......
+.m....u4
+14:47:44.656385 IP 11.212.22.21.8081 > 0cc775f8cdf8.53504: Flags [P.], seq 108:110, ack 235, win 502, options [nop,nop,TS val 3398399284 ecr 3144531983], length 2
+E..6GA@.>.......	............fZ.....-......
+..u4.m..{}
+14:47:44.656400 IP 0cc775f8cdf8.53504 > 11.212.22.21.8081: Flags [.], ack 110, win 507, options [nop,nop,TS val 3144531983 ecr 3398399284], length 0
+E..4'.@.@...	............fZ.........-......
+.m....u4
+14:47:44.656681 IP 11.212.22.21.8081 > 0cc775f8cdf8.53504: Flags [F.], seq 110, ack 235, win 502, options [nop,nop,TS val 3398399284 ecr 3144531983], length 0
+E..4GB@.>.......	............fZ.....-......
+..u4.m..
+14:47:44.656729 IP 0cc775f8cdf8.53504 > 11.212.22.21.8081: Flags [F.], seq 235, ack 111, win 507, options [nop,nop,TS val 3144531984 ecr 3398399284], length 0
+E..4'.@.@...	............fZ.........-......
+.m....u4
+14:47:44.656853 IP 11.212.22.21.8081 > 0cc775f8cdf8.53504: Flags [.], ack 236, win 502, options [nop,nop,TS val 3398399285 ecr 3144531984], length 0
+E..4GC@.>.......	............fZ.....-......
+..u5.m..
+14:47:44.657626 IP 0cc775f8cdf8.41389 > 198.51.100.1.53: 16165+ A? imageservice.marathon.l4lb.thisdcos.directory. (63)
+E..[V.@.@...	....3d....5.G6.?%...........imageservice.marathon.l4lb.thisdcos	directory.....
+14:47:44.658251 IP 198.51.100.1.53 > 0cc775f8cdf8.41389: 16165*- 1/0/0 A 11.248.165.89 (79)
+E..k.E@.@.;..3d.	....5...W6.?%...........imageservice.marathon.l4lb.thisdcos	directory....................Y
+14:47:44.658443 IP 0cc775f8cdf8.56570 > 11.248.165.89.8082: Flags [S], seq 3452026864, win 64860, options [mss 1380,sackOK,TS val 2233240676 ecr 0,nop,wscale 7], length 0
+E..<..@.@..!	......Y...............\.......d...
+...d........
+14:47:44.658574 IP 11.248.165.89.8082 > 0cc775f8cdf8.56570: Flags [S.], seq 2296401793, ack 3452026865, win 64296, options [mss 1380,sackOK,TS val 1712489829 ecr 2233240676,nop,wscale 7], length 0
+E..<..@.>......Y	.........O........(.......d...
+f..e...d....
+14:47:44.658590 IP 0cc775f8cdf8.56570 > 11.248.165.89.8082: Flags [.], ack 1, win 507, options [nop,nop,TS val 2233240676 ecr 1712489829], length 0
+E..4..@.@..(	......Y..........O............
+...df..e
+14:47:44.658698 IP 0cc775f8cdf8.56570 > 11.248.165.89.8082: Flags [P.], seq 1:213, ack 1, win 507, options [nop,nop,TS val 2233240677 ecr 1712489829], length 212
+E.....@.@..S	......Y..........O............
+...ef..eGET /api/covers/undefined HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: imageservice.marathon.l4lb.thisdcos.directory:8082
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:44.658851 IP 11.248.165.89.8082 > 0cc775f8cdf8.56570: Flags [.], ack 213, win 502, options [nop,nop,TS val 1712489830 ecr 2233240677], length 0
+E..4#.@.>.\>...Y	.........O................
+f..f...e
+14:47:44.694435 IP 11.248.165.89.8082 > 0cc775f8cdf8.56570: Flags [P.], seq 1:116, ack 213, win 502, options [nop,nop,TS val 1712489865 ecr 2233240677], length 115
+E...#.@.>.[....Y	.........O..........l.....
+f......eHTTP/1.1 404 Not Found
+Date: Sat, 13 Nov 2021 14:47:44 GMT
+Content-type: application/json
+Content-length: 35
+
+
+14:47:44.694462 IP 0cc775f8cdf8.56570 > 11.248.165.89.8082: Flags [.], ack 116, win 507, options [nop,nop,TS val 2233240712 ecr 1712489865], length 0
+E..4..@.@..&	......Y..........O............
+....f...
+14:47:44.694626 IP 11.248.165.89.8082 > 0cc775f8cdf8.56570: Flags [P.], seq 116:151, ack 213, win 502, options [nop,nop,TS val 1712489865 ecr 2233240712], length 35
+E..W#.@.>.\....Y	.........O................
+f.......{"message":"Invalid country code!"}
+14:47:44.694637 IP 0cc775f8cdf8.56570 > 11.248.165.89.8082: Flags [.], ack 151, win 507, options [nop,nop,TS val 2233240712 ecr 1712489865], length 0
+E..4..@.@..%	......Y..........P............
+....f...
+14:47:44.695068 IP 0cc775f8cdf8.56570 > 11.248.165.89.8082: Flags [F.], seq 213, ack 151, win 507, options [nop,nop,TS val 2233240713 ecr 1712489865], length 0
+E..4..@.@..$	......Y..........P............
+....f...
+14:47:44.695166 IP 11.248.165.89.8082 > 0cc775f8cdf8.56570: Flags [F.], seq 151, ack 213, win 502, options [nop,nop,TS val 1712489866 ecr 2233240712], length 0
+E..4#.@.>.\;...Y	.........P................
+f.......
+14:47:44.695188 IP 0cc775f8cdf8.56570 > 11.248.165.89.8082: Flags [.], ack 152, win 507, options [nop,nop,TS val 2233240713 ecr 1712489866], length 0
+E..4..@.@..#	......Y..........P............
+....f...
+14:47:44.695251 IP 11.248.165.89.8082 > 0cc775f8cdf8.56570: Flags [.], ack 214, win 502, options [nop,nop,TS val 1712489866 ecr 2233240713], length 0
+E..4#.@.>.\:...Y	.........P................
+f.......
+14:47:44.787448 IP 11.212.22.21.8081 > 0cc775f8cdf8.53502: Flags [P.], seq 1:109, ack 225, win 502, options [nop,nop,TS val 1637660630 ecr 3144531973], length 108
+E....Q@.>.x.....	.........!..t......-......
+a....m..HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:44 GMT
+Content-type: application/json
+Content-length: 46
+
+
+14:47:44.787482 IP 0cc775f8cdf8.53502 > 11.212.22.21.8081: Flags [.], ack 109, win 507, options [nop,nop,TS val 3144532114 ecr 1637660630], length 0
+E..4..@.@.Cw	............t...."4....-......
+.m..a...
+14:47:44.787776 IP 11.212.22.21.8081 > 0cc775f8cdf8.53502: Flags [P.], seq 109:155, ack 225, win 502, options [nop,nop,TS val 1637660630 ecr 3144532114], length 46
+E..b.R@.>.x.....	........."4.t......-......
+a....m..{"id":"3XHO7cRUPCLOr6jwp8vsx5","name":"alt-J"}
+14:47:44.787798 IP 0cc775f8cdf8.53502 > 11.212.22.21.8081: Flags [.], ack 155, win 507, options [nop,nop,TS val 3144532115 ecr 1637660630], length 0
+E..4..@.@.Cv	............t...."b....-......
+.m..a...
+14:47:44.788413 IP 0cc775f8cdf8.53502 > 11.212.22.21.8081: Flags [F.], seq 225, ack 155, win 507, options [nop,nop,TS val 3144532115 ecr 1637660630], length 0
+E..4..@.@.Cu	............t...."b....-......
+.m..a...
+14:47:44.788550 IP 11.212.22.21.8081 > 0cc775f8cdf8.53502: Flags [F.], seq 155, ack 225, win 502, options [nop,nop,TS val 1637660631 ecr 3144532115], length 0
+E..4.S@.>.y.....	........."b.t......-......
+a....m..
+14:47:44.788570 IP 0cc775f8cdf8.53502 > 11.212.22.21.8081: Flags [.], ack 156, win 507, options [nop,nop,TS val 3144532115 ecr 1637660631], length 0
+E..4..@.@.Ct	............t...."c....-......
+.m..a...
+14:47:44.788786 IP 11.212.22.21.8081 > 0cc775f8cdf8.53502: Flags [.], ack 226, win 502, options [nop,nop,TS val 1637660632 ecr 3144532115], length 0
+E..4.T@.>.y.....	........."c.t......-......
+a....m..
+14:47:44.789950 IP 0cc775f8cdf8.46172 > 198.51.100.1.53: 48168+ A? chartservice.marathon.l4lb.thisdcos.directory. (63)
+E..[V.@.@...	....3d..\.5.G6..(...........chartservice.marathon.l4lb.thisdcos	directory.....
+14:47:44.790766 IP 198.51.100.1.53 > 0cc775f8cdf8.46172: 48168*- 1/0/0 A 11.230.177.124 (79)
+E..k.F@.@.;..3d.	....5.\.W6..(...........chartservice.marathon.l4lb.thisdcos	directory....................|
+14:47:44.791169 IP 0cc775f8cdf8.48932 > 11.230.177.124.8083: Flags [S], seq 1106414962, win 64860, options [mss 1380,sackOK,TS val 1042636066 ecr 0,nop,wscale 7], length 0
+E..<..@.@.k.	......|.$..A..r.......\.......d...
+>%]"........
+14:47:44.791457 IP 11.230.177.124.8083 > 0cc775f8cdf8.48932: Flags [S.], seq 1276972709, ack 1106414963, win 64296, options [mss 1380,sackOK,TS val 1557723500 ecr 1042636066,nop,wscale 7], length 0
+E..<..@.>.s....|	......$L...A..s...(.......d...
+\..l>%]"....
+14:47:44.791490 IP 0cc775f8cdf8.48932 > 11.230.177.124.8083: Flags [.], ack 1, win 507, options [nop,nop,TS val 1042636066 ecr 1557723500], length 0
+E..4..@.@.k.	......|.$..A..sL........
+.....
+>%]"\..l
+14:47:44.791879 IP 0cc775f8cdf8.48932 > 11.230.177.124.8083: Flags [P.], seq 1:226, ack 1, win 507, options [nop,nop,TS val 1042636067 ecr 1557723500], length 225
+E.....@.@.j.	......|.$..A..sL..............
+>%]#\..lGET /api/charts/3XHO7cRUPCLOr6jwp8vsx5 HTTP/1.1
+Accept: */*
+User-Agent: Restler for node.js
+Host: chartservice.marathon.l4lb.thisdcos.directory:8083
+Accept-Encoding: gzip, deflate
+Content-Length: 0
+Connection: close
+
+
+14:47:44.792060 IP 11.230.177.124.8083 > 0cc775f8cdf8.48932: Flags [.], ack 226, win 502, options [nop,nop,TS val 1557723501 ecr 1042636067], length 0
+E..4.K@.>.x....|	......$L...A..T.....
+.....
+\..m>%]#
+14:47:44.795314 IP 11.230.177.124.8083 > 0cc775f8cdf8.48932: Flags [P.], seq 1:110, ack 226, win 502, options [nop,nop,TS val 1557723504 ecr 1042636067], length 109
+E....L@.>.x&...|	......$L...A..T.....w.....
+\..p>%]#HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2021 14:47:44 GMT
+Content-type: application/json
+Content-length: 352
+
+
+14:47:44.795339 IP 0cc775f8cdf8.48932 > 11.230.177.124.8083: Flags [.], ack 110, win 507, options [nop,nop,TS val 1042636070 ecr 1557723504], length 0
+E..4..@.@.k.	......|.$..A..TL........
+.....
+>%]&\..p
+14:47:44.795508 IP 11.230.177.124.8083 > 0cc775f8cdf8.48932: Flags [P.], seq 110:462, ack 226, win 502, options [nop,nop,TS val 1557723504 ecr 1042636070], length 352
+E....M@.>.w2...|	......$L...A..T.....j.....
+\..p>%]&[{"artists":"alt-J","id":"3Wu6MhnZuLuzfH5wFC2g9i","title":"Breezeblocks"},{"artists":"alt-J","id":"6jXJmMCmEXC8SmZTK0KId6","title":"Left Hand Free"},{"artists":"alt-J","id":"4UoZigJdqn8y8jmMzuvmLd","title":"U&ME"},{"artists":"alt-J","id":"09BGE23vqmtylTUBEhzu2H","title":"Fitzpleasure"},{"artists":"alt-J","id":"7EDMvrb5PA5TP0VQ8z9p82","title":"Taro"}]
+14:47:44.795524 IP 0cc775f8cdf8.48932 > 11.230.177.124.8083: Flags [.], ack 462, win 505, options [nop,nop,TS val 1042636070 ecr 1557723504], length 0
+E..4..@.@.k.	......|.$..A..TL..s.....
+.....
+>%]&\..p
+14:47:44.795817 IP 0cc775f8cdf8.48932 > 11.230.177.124.8083: Flags [F.], seq 226, ack 462, win 505, options [nop,nop,TS val 1042636071 ecr 1557723504], length 0
+E..4..@.@.k.	......|.$..A..TL..s.....
+.....
+>%]'\..p
+14:47:44.795942 IP 11.230.177.124.8083 > 0cc775f8cdf8.48932: Flags [F.], seq 462, ack 226, win 502, options [nop,nop,TS val 1557723505 ecr 1042636070], length 0
+E..4.N@.>.x....|	......$L..sA..T.....
+.....
+\..q>%]&
+14:47:44.795960 IP 0cc775f8cdf8.48932 > 11.230.177.124.8083: Flags [.], ack 463, win 505, options [nop,nop,TS val 1042636071 ecr 1557723505], length 0
+E..4..@.@.k.	......|.$..A..UL..t.....
+.....
+>%]'\..q
+14:47:44.796048 IP 11.230.177.124.8083 > 0cc775f8cdf8.48932: Flags [.], ack 227, win 502, options [nop,nop,TS val 1557723505 ecr 1042636071], length 0
+E..4.O@.>.x....|	......$L..tA..U.....
+.....
+\..q>%]'
+14:47:51.703158 IP 9.0.2.129.54102 > 0cc775f8cdf8.3000: Flags [S], seq 258671977, win 64860, options [mss 1380,sackOK,TS val 4187237793 ecr 0,nop,wscale 7], length 0
+E..<..@.@...	...	....V...k.i.......\.1.....d...
+..-.........
+14:47:51.703192 IP 0cc775f8cdf8.3000 > 9.0.2.129.54102: Flags [S.], seq 3942368325, ack 258671978, win 64296, options [mss 1380,sackOK,TS val 3693721169 ecr 4187237793,nop,wscale 7], length 0
+E..<..@.@.#.	...	......V...E.k.j...(.1.....d...
+.).Q..-.....
+14:47:51.703220 IP 9.0.2.129.54102 > 0cc775f8cdf8.3000: Flags [.], ack 1, win 507, options [nop,nop,TS val 4187237793 ecr 3693721169], length 0
+E..4..@.@...	...	....V...k.j...F.....).....
+..-..).Q
+14:47:51.703433 IP 9.0.2.129.54102 > 0cc775f8cdf8.3000: Flags [P.], seq 1:259, ack 1, win 507, options [nop,nop,TS val 4187237793 ecr 3693721169], length 258
+E..6..@.@.
+.	...	....V...k.j...F.....+.....
+..-..).QGET /metrics HTTP/1.1
+Host: 9.0.2.130:3000
+User-Agent: Go-http-client/1.1
+Accept: application/vnd.google.protobuf;proto=io.prometheus.client.MetricFamily;encoding=delimited;q=0.7,text/plain;version=0.0.4;q=0.3
+Accept-Encoding: gzip
+Connection: close
+
+
+14:47:51.703455 IP 0cc775f8cdf8.3000 > 9.0.2.129.54102: Flags [.], ack 259, win 502, options [nop,nop,TS val 3693721169 ecr 4187237793], length 0
+E..4of@.@..[	...	......V...F.k.l.....).....
+.).Q..-.
+14:47:51.706408 IP 0cc775f8cdf8.3000 > 9.0.2.129.54102: Flags [P.], seq 1:6841, ack 259, win 502, options [nop,nop,TS val 3693721172 ecr 4187237793], length 6840
+E...og@.@...	...	......V...F.k.l....1......
+.).T..-.HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8; version=0.0.4
+Content-Length: 6912
+ETag: W/"1b00-MBrR6n8NfC3vss4XHZIw7Q"
+Date: Sat, 13 Nov 2021 14:47:51 GMT
+Connection: close
+
+# HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE process_cpu_user_seconds_total counter
+process_cpu_user_seconds_total{app="nodejs-frontend"} 529.5442179999976 1636814866559
+
+# HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE process_cpu_system_seconds_total counter
+process_cpu_system_seconds_total{app="nodejs-frontend"} 77.65138800000005 1636814866559
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total{app="nodejs-frontend"} 607.1956059999949 1636814866559
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds{app="nodejs-frontend"} 1636471973
+
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes{app="nodejs-frontend"} 52056064 1636814866560
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes{app="nodejs-frontend"} 1236058112 1636814866560
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes{app="nodejs-frontend"} 114503680 1636814866560
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds{app="nodejs-frontend"} 14 1636814866560
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds{app="nodejs-frontend"} 9223372036854776000
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds{app="nodejs-frontend"} 0.000419306 1636814866560
+
+# HELP nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE nodejs_active_handles gauge
+nodejs_active_handles{type="Socket",app="nodejs-frontend"} 4 1636814866559
+nodejs_active_handles{type="Server",app="nodejs-frontend"} 1 1636814866559
+
+# HELP nodejs_active_handles_total Total number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total{app="nodejs-frontend"} 5 1636814866559
+
+# HELP nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE nodejs_active_requests gauge
+nodejs_active_requests{type="FSReqWrap",app="nodejs-frontend"} 2
+
+# HELP nodejs_active_requests_total Total number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total{app="nodejs-frontend"} 2 1636814866560
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes{app="nodejs-frontend"} 30208000 1636814866560
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes{app="nodejs-frontend"} 25279088 1636814866560
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes{app="nodejs-frontend"} 527225 1636814866560
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new",app="nodejs-frontend"} 1048576 1636814866560
+nodejs_heap_space_size_total_bytes{space="old",app="nodejs-frontend"} 20926464 1636814866560
+nodejs_heap_space_size_total_bytes{space="code",app="nodejs-frontend"} 5242880 1636814866560
+nodejs_heap_space_size_total_bytes{space="map",app="nodejs-frontend"} 2179072 1636814866560
+nodejs_heap_space_size_total_bytes{space="large_object",app="nodejs-frontend"} 811008 1636814866560
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new",app="nodejs-frontend"} 857744 1636814866560
+nodejs_heap_space_size_used_bytes{space="old",app="nodejs-frontend"} 19571160 1636814866560
+nodejs_heap_space_size_used_bytes{space="code",app="nodejs-frontend"} 3407776 1636814866560
+nodejs_heap_space_size_used_bytes{space="map",app="nodejs-frontend"} 650936 1636814866560
+nodejs_heap_space_size_used_bytes{space="large_object",app="nodejs-frontend"} 793464 1636814866560
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new",app="nodejs-frontend"} 173936 1636814866560
+nodejs_heap_space_size_available_bytes{space="old",app="nodejs-frontend"} 550280 1636814866560
+nodejs_heap_space_size_available_bytes{space="code",app="nodejs-frontend"} 24544 1636814866560
+nodejs_heap_space_size_available_bytes{space="map",app="nodejs-frontend"} 1475608 1636814866560
+nodejs_heap_space_size_available_bytes{space="large_object",app="nodejs-frontend"} 1467141632 1636814866560
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.10.3",major="6",minor="10",patch="3",app="nodejs-frontend"} 1
+
+# HELP http_request_total Total number of HTTP requests processed
+# TYPE http_request_total counter
+http_request_total{app="nodejs-frontend"} 11354
+
+# HELP http_request_duration_seconds Duration of HTTP requests in microseconds
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{le="0.1",route="/",code="200",method="GET",app="nodejs-frontend"} 11349
+http_request_duration_seconds_bucket{le="0.3",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bucket{le="0.5",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bucket{le="0.7",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bucket{le="1",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bucket{le="3",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bucket{le="5",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bucket{le="7",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bucket{le="10",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_bu
+14:47:51.706448 IP 9.0.2.129.54102 > 0cc775f8cdf8.3000: Flags [.], ack 6841, win 481, options [nop,nop,TS val 4187237796 ecr 3693721172], length 0
+E..4..@.@...	...	....V...k.l.........).....
+..-..).T
+14:47:51.706459 IP 0cc775f8cdf8.3000 > 9.0.2.129.54102: Flags [P.], seq 6841:7128, ack 259, win 502, options [nop,nop,TS val 3693721172 ecr 4187237793], length 287
+E..Sol@.@..6	...	......V.....k.l.....H.....
+.).T..-.cket{le="+Inf",route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+http_request_duration_seconds_sum{route="/",code="200",method="GET",app="nodejs-frontend"} 13.850274992999971
+http_request_duration_seconds_count{route="/",code="200",method="GET",app="nodejs-frontend"} 11354
+
+14:47:51.706476 IP 9.0.2.129.54102 > 0cc775f8cdf8.3000: Flags [.], ack 7128, win 479, options [nop,nop,TS val 4187237796 ecr 3693721172], length 0
+E..4..@.@...	...	....V...k.l.........).....
+..-..).T
+14:47:51.706554 IP 9.0.2.129.54102 > 0cc775f8cdf8.3000: Flags [F.], seq 259, ack 7128, win 502, options [nop,nop,TS val 4187237796 ecr 3693721172], length 0
+E..4..@.@...	...	....V...k.l.........).....
+..-..).T
+14:47:51.706662 IP 0cc775f8cdf8.3000 > 9.0.2.129.54102: Flags [F.], seq 7128, ack 260, win 502, options [nop,nop,TS val 3693721172 ecr 4187237796], length 0
+E..4om@.@..T	...	......V.....k.m.....).....
+.).T..-.
+14:47:51.706685 IP 9.0.2.129.54102 > 0cc775f8cdf8.3000: Flags [.], ack 7129, win 502, options [nop,nop,TS val 4187237797 ecr 3693721172], length 0
+E..4..@.@...	...	....V...k.m.........).....
+..-..).T
