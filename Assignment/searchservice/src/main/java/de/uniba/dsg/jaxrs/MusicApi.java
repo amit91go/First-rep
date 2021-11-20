@@ -8,6 +8,7 @@ import javax.ws.rs.core.Application;
 
 import de.uniba.dsg.jaxrs.resources.SearchArtistResource;
 import de.uniba.dsg.jaxrs.resources.SearchTrackResource;
+import de.uniba.dsg.jaxrs.resources.LocalIPResponseFilter;
 
 @ApplicationPath("/")
 /**
@@ -21,6 +22,7 @@ public class MusicApi extends Application {
         Set<Class<?>> resources = new HashSet<>();
         resources.add(SearchArtistResource.class);
         resources.add(SearchTrackResource.class);
+        resources.add(LocalIPResponseFilter.class);
         return resources;
     }
 }

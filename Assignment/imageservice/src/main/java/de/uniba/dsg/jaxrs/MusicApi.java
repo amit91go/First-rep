@@ -7,6 +7,7 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 import de.uniba.dsg.jaxrs.resources.ImageResource;
+import de.uniba.dsg.jaxrs.resources.LocalIPResponseFilter;
 
 @ApplicationPath("/")
 /**
@@ -19,6 +20,7 @@ public class MusicApi extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new HashSet<>();
         resources.add(ImageResource.class);
+	resources.add(LocalIPResponseFilter.class);
         return resources;
     }
 }

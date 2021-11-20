@@ -6,5 +6,5 @@ RUN gradle shadowJar
 FROM amazoncorretto:8u212
 COPY --from=builder /home/gradle/src/build/libs/searchapi.jar /usr/jar/sample.jar
 WORKDIR /usr/jar
-EXPOSE 8081
+EXPOSE 9999
 CMD ["java", "-jar", "sample.jar"]
