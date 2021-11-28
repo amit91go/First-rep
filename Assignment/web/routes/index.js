@@ -58,10 +58,10 @@ router.get('/', function(req, res, next) {
         // get top songs
         console.log('Artist is ' + artist);
 
-        rest.get('http://search:8081/api/artists/search?artist=' + artist).on('complete', function(data) {
+        rest.get('http://search:8081/api/artists/search?artist=' + artist, {headers : {Srcip: addresses[0]}}).on('complete', function(data) {
           console.log('Artist ID is ' + data["id"]);
           console.log('req headers ' + JSON.stringify(req.headers));
-          rest.get('http://charts:8083/api/charts/' + data["id"]).on('complete', function(data) {
+          rest.get('http://charts:8083/api/charts/' + data["id"], {headers : {Srcip: addresses[0]}}).on('complete', function(data) {
             console.log('Top songs are ' + JSON.stringify(data));
             callback(null, data);
           });
@@ -71,10 +71,10 @@ router.get('/', function(req, res, next) {
           // get cover data
           console.log('Title is ' + title);
 
-          rest.get('http://search:8081/api/tracks/search?title=' + title + '&artist=' + artist).on('complete', function(data) {
+          rest.get('http://search:8081/api/tracks/search?title=' + title + '&artist=' + artist, {headers : {Srcip: addresses[0]}}).on('complete', function(data) {
             console.log('Title ID is ' + data["id"]);
 
-            rest.get('http://images:8082/api/covers/' + data["id"]).on('complete', function(data) {
+            rest.get('http://images:8082/api/covers/' + data["id"], {headers : {Srcip: addresses[0]}}).on('complete', function(data) {
               console.log('Cover image is ' + data["url"]);
               callback(null, data["url"]);
             });
