@@ -1,7 +1,16 @@
 for i in `ls nw_logs/$1_tcpdump_dpid*pcap`
 do
         rm -f nw_logs/match
-        if grep -P $2 $i| grep -P $3 >> nw_logs/match
+	if [ -z "$2" ]
+	then
+		grep "GET /api/" $i >> nw_logs/match
+	elif [ -z "$3" ]
+	then
+		grep -P $2 $i >> nw_logs/match
+	else
+		grep -P $2 $i| grep -P $3 >> nw_logs/match
+	fi
+	if [ -s nw_logs/match ]
         then
                 sed -i 's/ /\\s/g' nw_logs/match
                 for j in `cat nw_logs/match`
@@ -16,7 +25,9 @@ do
                         begin=`grep -n \`cat nw_logs/currentmatch\` $i|  cut -f1 -d:`
                         diff=`tail -n +$begin $i| grep -n -m1 \`cat nw_logs/ips\`|cut -f1 -d:`
                         if [ -z "$diff" ]; then diff=`tail -n +$begin $i| grep -n -m1 -P $failsafe|cut -f1 -d:`;fi
-                        srcip=`tail -n +$begin $i| grep -m1 X-Forwarded-For |cut -f2 -d:`
+			echo $begin,$i
+                        srcip=`tail -n +$begin $i| grep -m1 -e X-Forwarded-For -e Srcip|cut -f2 -d:`
+			echo $srcip
                         end=$(($begin + $diff))
                         begin=$(($begin - 3))
                         sed -n "${begin},${end}p" $i | grep `cat nw_logs/pattern`| awk '{print $NF}' >> nw_logs/web_to_$1_tmp

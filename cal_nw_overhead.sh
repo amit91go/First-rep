@@ -1,5 +1,10 @@
 rm -f nw_logs/web_to_search nw_logs/web_to_chart nw_logs/search_to_web nw_logs/chart_to_web nw_logs/web_to_cover nw_logs/cover_to_web
-if [ $1 == 'dcos' ]
+if [ -z "$1" ]
+then
+	sh get_nw_data.sh search
+	sh get_nw_data.sh chart 
+	sh get_nw_data.sh cover
+elif [ $1 == 'dcos' ]
 then
 	sh get_nw_data.sh search "/api/artists/search\?artist=(?!alt-J)"
 	sh get_nw_data.sh search "/api/tracks/search\?title=(?!Nara)"

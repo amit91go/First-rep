@@ -2,7 +2,6 @@ mkdir -p nw_logs
 rm -f nw_logs/*
 
 sudo docker ps | grep localhost:5000/webimage | awk '{print $NF}' >> nw_logs/webcontainers_id
-
 sudo docker ps | grep localhost:5000/searchimage | awk '{print $NF}' >> nw_logs/searchcontainers_id
 sudo docker ps | grep localhost:5000/chartimage | awk '{print $NF}' >> nw_logs/chartcontainers_id
 sudo docker ps | grep localhost:5000/coverimage | awk '{print $NF}' >> nw_logs/covercontainers_id
