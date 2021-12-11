@@ -17,8 +17,8 @@ then
 	sh get_nw_data.sh cover "api/covers/(?!57tzAvfPHXHzCHUNp9AUBm)"
 elif [ $1 == 'nomad' ]
 then
-	sh get_nw_data.sh search "/api/artists/search\?artist=(?!alt-J)" "/api/artists/search\?artist=(?!shaan)"
+	sh get_nw_data.sh search "/api/artists/search\?artist=(?!alt-J)" "/api/artists/search\?artist=(?!shakira)"
 	sh get_nw_data.sh search "/api/tracks/search\?title=(?!Nara)" "/api/tracks/search\?title=(?!Nara)"
-	sh get_nw_data.sh chart "/api/charts/(?!3XHO7cRUPCLOr6jwp8vsx5)" "/api/charts/(?!5cB4d4jPYjMT326sjihQ4m)"
-	sh get_nw_data.sh cover "api/covers/(?!57tzAvfPHXHzCHUNp9AUBm)" "api/covers/(?!5EYZZvmNAH5VZCwuzYJqoA)"
+	sh get_nw_data.sh chart "/api/charts/(?!3XHO7cRUPCLOr6jwp8vsx5)" "/api/charts/(?!0EmeFodog0BfCgMzAIvKQp)"
+	sh get_nw_data.sh cover "api/covers/(?!57tzAvfPHXHzCHUNp9AUBm)" "api/covers/(?!2Cd9iWfcOpGDHLz6tVA3G4)"
 fi
