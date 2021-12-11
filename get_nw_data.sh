@@ -16,13 +16,14 @@ do
                 for j in `cat nw_logs/match`
                 do
                         rm -f nw_logs/ips nw_logs/begin nw_logs/diff nw_logs/pattern nw_logs/currentmatch nw_logs/ips_opp nw_logs/pattern_opp nw_logs/web_to_$1_tmp nw_logs/$1_to_web_tmp
-                        echo $j >>nw_logs/currentmatch
+                        echo $j|awk -F 'GET' '{print $2}' >>nw_logs/currentmatch
                         grep -B3 `cat nw_logs/currentmatch` $i | grep length| awk -F 'IP|Flags' '{print $2}' >> nw_logs/ips
                         sed -i 's/ /\\s/g' nw_logs/ips
                         cat nw_logs/ips >> nw_logs/pattern
                         sed -i 's/$/Flags\\s\\[F.\\]/g' nw_logs/ips
                         failsafe=`cat nw_logs/pattern`"Flags\s\[(?!P)"
                         begin=`grep -n \`cat nw_logs/currentmatch\` $i|  cut -f1 -d:`
+			echo $begin
                         diff=`tail -n +$begin $i| grep -n -m1 \`cat nw_logs/ips\`|cut -f1 -d:`
                         if [ -z "$diff" ]; then diff=`tail -n +$begin $i| grep -n -m1 -P $failsafe|cut -f1 -d:`;fi
 			echo $begin,$i
