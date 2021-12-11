@@ -1,5 +1,10 @@
 mkdir -p nw_logs
 rm -f nw_logs/*
+if [ -z "$1" ]
+then
+	echo "Error :No input provided, ex: K8s"
+	exit 1
+fi
 if [ "$1" = 'k8s' ]
 then
 	sudo docker images | grep searchimage| awk '{print $3}' >> nw_logs/searchimage_id
