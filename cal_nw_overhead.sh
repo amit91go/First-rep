@@ -1,6 +1,11 @@
 rm -f nw_logs/web_to_search nw_logs/web_to_chart nw_logs/search_to_web nw_logs/chart_to_web nw_logs/web_to_cover nw_logs/cover_to_web
 if [ -z "$1" ]
 then
+        echo "Error :No input provided, ex: K8s"
+        exit 1
+fi
+if [ "$1" = 'k8s' ]
+then
 	sh get_nw_data.sh search
 	sh get_nw_data.sh chart 
 	sh get_nw_data.sh cover
