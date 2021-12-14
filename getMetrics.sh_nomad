@@ -1,0 +1,27 @@
+rm -f /tmp/nodes /tmp/job /tmp/deps deployments workernodes
+nomad node status| grep ready| awk '{if ($3 != "nomadconsulsrv1"){print $1}}' >>/tmp/nodes
+for i in `cat /tmp/nodes`
+do
+	hostname="$i"
+        cpuvar=100
+        memvar=`./promql nomad_client_host_memory_total| grep $i| awk '{print $9}'`
+        cpuutilvar=`./promql "max_over_time(nomad_client_host_cpu_total[1h])"| grep $i | awk '{print $9}'`
+        memutilvar=`./promql "max_over_time(nomad_client_host_memory_used[1h])"|grep $i | awk '{print $8}'`
+        conatners=`nomad job status assignment| grep $i | grep running| awk '{ORS = " "}{print $1}'`
+	jq -n -r --arg hostName "$hostname" --arg totalCPU "$cpuvar" --arg totalMemory "$memvar" --arg cpuUtilisation "$cpuutilvar" --arg memoryUtilisation "$memutilvar" --arg runningContainers "$conatners" '{hostName:$hostName,totalCPU:$totalCPU,totalMemory:$totalMemory,cpuUtilisation:$cpuUtilisation,memoryUtilisation:$memoryUtilisation,runningContainers:$runningContainers}' >>workernodes
+done
+jq -s '.' workernodes > nodes.json
+
+nomad job status assignment>>/tmp/job
+cat /tmp/job| grep running | grep -v Status| awk '{print $1}' >>/tmp/deps
+for i in `cat /tmp/deps`
+do
+	deployment=$i
+	totalIncomingReq=0
+	cpuRequired=`./promql "max_over_time(nomad_client_allocs_cpu_total_percent[1h])"| grep $i| awk '{print $8}'`
+	memoryRequired=`./promql "max_over_time(nomad_client_allocs_memory_usage[1h])"| grep 0a4c8dbd|  awk '{print $8}'`
+	group=`cat /tmp/job| grep $i|awk '{print $3}'`
+	totalRunningContainers=`cat /tmp/job| grep running | grep -c $group`
+	jq -n -r --arg deployment "$deployment" --arg totalIncomingReq "$totalIncomingReq" --arg cpuRequired "$cpuRequired" --arg memoryRequired "$memoryRequired" --arg totalRunningContainers "$totalRunningContainers" '{deployment:$deployment,totalIncomingReq:$totalIncomingReq,cpuRequired:$cpuRequired,memoryRequired:$memoryRequired,totalRunningContainers:$totalRunningContainers}' >>deployments
+done
+jq -s '.' deployments > deployments.json
