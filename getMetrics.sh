@@ -5,7 +5,7 @@ do
         hostname="$i"
         cpuvar=100
 	memvar=`./promql node_memory_MemTotal_bytes| grep $i| awk '{print $9}'`
-        cpuutilvar=`./promql "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"node-exporter\",mode=\"idle\"}[5m])) * 100)"| grep $i| awk '{print $2}'`
+        cpuutilvar=`./promql "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"node-exporter\",mode=\"idle\"}[15m])) * 100)"| grep $i| awk '{print $2}'`
         memutilvar=`./promql "node_memory_MemTotal_bytes - avg_over_time(node_memory_MemAvailable_bytes[15m])"| grep $i| awk '{print $8}'`
 	nodename=`grep $i nodes|cut -d ":" -f2`
         conatners=`kubectl get pods -o wide| grep "\-d\-"| grep $nodename| cut -d "-" -f1|awk '{ORS = "service "}{print $1}'`

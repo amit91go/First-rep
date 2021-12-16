@@ -1,27 +1,37 @@
-rm -f /tmp/nodes /tmp/job /tmp/deps deployments workernodes
-nomad node status| grep ready| awk '{if ($3 != "nomadconsulsrv1"){print $1}}' >>/tmp/nodes
+rm -f /tmp/nodes /tmp/job /tmp/deps deployments workernodes nw_transmissions
+./dcos node| grep agent | awk '{print $1}' >>/tmp/nodes
 for i in `cat /tmp/nodes`
 do
 	hostname="$i"
         cpuvar=100
-        memvar=`./promql nomad_client_host_memory_total| grep $i| awk '{print $9}'`
-        cpuutilvar=`./promql "avg_over_time(nomad_client_host_cpu_total[15m])"| grep $i | awk '{print $9}'`
-        memutilvar=`./promql "avg_over_time(nomad_client_host_memory_used[15m])"|grep $i | awk '{print $8}'`
-        conatners=`nomad job status assignment| grep $i | grep running| awk '{ORS = " "}{print $1}'`
+        memvar=`./promql mem_total | grep $i| awk '{print $7}'`
+        cpuutilvar=`./promql "avg_over_time(cpu_usage_system[15m]) + avg_over_time(cpu_usage_user[15m])" | grep cpu-total| grep $i| awk '{print $7}'`
+        memutilvar=`./promql "max_over_time(mem_used[15m])"| grep $i| awk '{print $6}'`
+        conatners=`./dcos marathon task list | grep service| grep True| grep $i | awk '{print $1}'|cut -d "/" -f2| uniq| awk '{ORS = " "}{print $1}'`
+
 	jq -n -r --arg hostName "$hostname" --arg totalCPU "$cpuvar" --arg totalMemory "$memvar" --arg cpuUtilisation "$cpuutilvar" --arg memoryUtilisation "$memutilvar" --arg runningContainers "$conatners" '{hostName:$hostName,totalCPU:$totalCPU,totalMemory:$totalMemory,cpuUtilisation:$cpuUtilisation,memoryUtilisation:$memoryUtilisation,runningContainers:$runningContainers}' >>workernodes
 done
 jq -s '.' workernodes > nodes.json
 
-nomad job status assignment>>/tmp/job
-cat /tmp/job| grep running | grep -v Status| awk '{print $1}' >>/tmp/deps
+./dcos marathon app list | grep service |awk '{print $1}'| cut -d "/" -f2 >>/tmp/deps
 for i in `cat /tmp/deps`
 do
 	deployment=$i
-	totalIncomingReq=0
-	cpuRequired=`./promql "max_over_time(nomad_client_allocs_cpu_total_percent[15m])"| grep $i| awk '{print $8}'`
-	memoryRequired=`./promql "max_over_time(nomad_client_allocs_memory_usage[15m])"| grep $i|  awk '{print $8}'`
-	group=`cat /tmp/job| grep $i|awk '{print $3}'`
-	totalRunningContainers=`cat /tmp/job| grep running | grep -c $group`
+	name=$i
+	suffix=service
+	name=${name%$suffix};
+	sum=0
+	if [ "$i" = 'webservice' ]
+	then
+		for j in `ls chart*_nwdata`; do sum=$(( $sum + `wc -l $j| cut -d " " -f1` )); done
+	else
+		for j in `ls $name*_nwdata`; do sum=$(( $sum + `wc -l $j| cut -d " " -f1` )); done
+	fi
+	totalIncomingReq=$sum
+	cpuRequired=`./promql "((max_over_time(cpus_user_time_secs[15m]) + max_over_time(cpus_system_time_secs[15m] )) /max_over_time(cpus_throttled_time_secs[15m]))"| grep $i| awk '{print $9}'| sort| tail -1`
+	memoryRequired=`./promql "max_over_time(mem_total_bytes[15m])" | grep $i| awk '{print $9}'| sort| tail -1`
+	totalRunningContainers=`./dcos marathon task list | grep True| grep -c $i`
+
 	jq -n -r --arg deployment "$deployment" --arg totalIncomingReq "$totalIncomingReq" --arg cpuRequired "$cpuRequired" --arg memoryRequired "$memoryRequired" --arg totalRunningContainers "$totalRunningContainers" '{deployment:$deployment,totalIncomingReq:$totalIncomingReq,cpuRequired:$cpuRequired,memoryRequired:$memoryRequired,totalRunningContainers:$totalRunningContainers}' >>deployments
 done
 jq -s '.' deployments > deployments.json
