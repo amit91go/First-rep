@@ -1,7 +1,7 @@
-rm -f nw_logs/web_to_search nw_logs/web_to_chart nw_logs/search_to_web nw_logs/chart_to_web nw_logs/web_to_cover nw_logs/cover_to_web
+rm -f nw_logs/search nw_logs/chart nw_logs/cover 
 if [ -z "$1" ]
 then
-        echo "Error :No input provided, ex: K8s"
+        echo "Error :No input provided, ex: k8s"
         exit 1
 fi
 if [ "$1" = 'k8s' ]
@@ -22,3 +22,4 @@ then
 	sh get_nw_data.sh chart "/api/charts/(?!3XHO7cRUPCLOr6jwp8vsx5)" "/api/charts/(?!0EmeFodog0BfCgMzAIvKQp)"
 	sh get_nw_data.sh cover "api/covers/(?!57tzAvfPHXHzCHUNp9AUBm)" "api/covers/(?!2Cd9iWfcOpGDHLz6tVA3G4)"
 fi
+cat nw_logs/cover| head -`wc -l nw_logs/chart|cut -d " " -f1` >nw_logs/cover
