@@ -1,0 +1,20 @@
+[
+  {
+    "consumer": "webservice",
+    "provider": "chartservice",
+    "noOfRequests": "10",
+    "bytesTransmitted": "5632"
+  },
+  {
+    "consumer": "webservice",
+    "provider": "coverservice",
+    "noOfRequests": "10",
+    "bytesTransmitted": "2095"
+  },
+  {
+    "consumer": "webservice",
+    "provider": "searchservice",
+    "noOfRequests": "20",
+    "bytesTransmitted": "4336"
+  }
+]

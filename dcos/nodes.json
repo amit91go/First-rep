@@ -1,0 +1,18 @@
+[
+  {
+    "hostName": "172.17.0.5",
+    "totalCPU": "100",
+    "totalMemory": "16654696448",
+    "cpuUtilisation": "11.134376972042752",
+    "memoryUtilisation": "9372311552",
+    "runningContainers": "chartservice coverservice searchservice "
+  },
+  {
+    "hostName": "172.17.0.6",
+    "totalCPU": "100",
+    "totalMemory": "16654696448",
+    "cpuUtilisation": "11.17064997401394",
+    "memoryUtilisation": "9393594368",
+    "runningContainers": "webservice "
+  }
+]
