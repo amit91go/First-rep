@@ -5,8 +5,8 @@ do
         hostname="$i"
         cpuvar=100
 	memvar=`./promql node_memory_MemTotal_bytes| grep $i| awk '{print $9}'`
-        cpuutilvar=`./promql "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"node-exporter\",mode=\"idle\"}[15m])) * 100)"| grep $i| awk '{print $2}'`
-        memutilvar=`./promql "node_memory_MemTotal_bytes - avg_over_time(node_memory_MemAvailable_bytes[15m])"| grep $i| awk '{print $8}'`
+        cpuutilvar=`./promql "100 - (avg by (instance) (irate(node_cpu_seconds_total{job=\"node-exporter\",mode=\"idle\"}[5m])) * 100)"| grep $i| awk '{print $2}'`
+        memutilvar=`./promql "node_memory_MemTotal_bytes - avg_over_time(node_memory_MemAvailable_bytes[5m])"| grep $i| awk '{print $8}'`
 	nodename=`grep $i nodes|cut -d ":" -f2`
         conatners=`kubectl get pods -o wide| grep "\-d\-"| grep $nodename| cut -d "-" -f1|awk '{ORS = "service "}{print $1}'`
 
@@ -18,22 +18,22 @@ kubectl get deployments | grep "\-d\-" | cut -d "-" -f1>>/tmp/deps
 for i in `cat /tmp/deps`
 do
         deployment=`echo $i`service
-	sum=0
-        if [ "$i" = 'web' ]
+        req=`wc -l hello| cut -d " " -f1`
+        if [ "$i" = 'search' ]
         then
-                for j in `ls chart*_nwdata`; do sum=$(( $sum + `wc -l $j| cut -d " " -f1` )); done
+               sum=$(( $req + $req ))
         else
-                for j in `ls $i*_nwdata`; do sum=$(( $sum + `wc -l $j| cut -d " " -f1` )); done
+               sum=$req
         fi
         totalIncomingReq=$sum
-        cpuRequired=`./promql "max(rate(container_cpu_usage_seconds_total{pod=~\"$i.*\"}[15m]) * 100)"| head -2| tail -1| awk '{print $1}'`
-        memoryRequired=`./promql "max(avg_over_time(container_memory_usage_bytes{pod=~\"$i.*\"}[15m]))"| head -2| tail -1| awk '{print $1}'`
+        cpuRequired=`./promql "max(rate(container_cpu_usage_seconds_total{pod=~\"$i.*\"}[5m]) * 100)"| head -2| tail -1| awk '{print $1}'`
+        memoryRequired=`./promql "max(avg_over_time(container_memory_usage_bytes{pod=~\"$i.*\"}[5m]))"| head -2| tail -1| awk '{print $1}'`
         totalRunningContainers=`kubectl get pods| grep -c $i`
 
         jq -n -r --arg deployment "$deployment" --arg totalIncomingReq "$totalIncomingReq" --arg cpuRequired "$cpuRequired" --arg memoryRequired "$memoryRequired" --arg totalRunningContainers "$totalRunningContainers" '{deployment:$deployment,totalIncomingReq:$totalIncomingReq,cpuRequired:$cpuRequired,memoryRequired:$memoryRequired,totalRunningContainers:$totalRunningContainers}' >>deployments
 done
 jq -s '.' deployments > deployments.json
-
+#for i in `ls First-rep/k8s`; do for j in `ls First-rep/k8s/$i`; do cp First-rep/k8s/$i/$j /home/vagrant/${j}_${i}_nwdata; done; done
 for i in `ls *_nwdata`
 do
         consumer=webservice
