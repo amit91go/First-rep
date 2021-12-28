@@ -3,16 +3,16 @@
     "hostName": "172.17.0.5",
     "totalCPU": "100",
     "totalMemory": "16654696448",
-    "cpuUtilisation": "11.134376972042752",
-    "memoryUtilisation": "9372311552",
+    "cpuUtilisation": "12.579324995897126",
+    "memoryUtilisation": "8893944627.2",
     "runningContainers": "chartservice coverservice searchservice "
   },
   {
     "hostName": "172.17.0.6",
     "totalCPU": "100",
     "totalMemory": "16654696448",
-    "cpuUtilisation": "11.17064997401394",
-    "memoryUtilisation": "9393594368",
+    "cpuUtilisation": "12.484270688127133",
+    "memoryUtilisation": "8898888908.8",
     "runningContainers": "webservice "
   }
 ]
