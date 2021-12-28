@@ -1,0 +1,30 @@
+[
+  {
+    "deployment": "chartservice",
+    "totalIncomingReq": "3425",
+    "cpuRequired": "5.912944793701172",
+    "memoryRequired": "138809344",
+    "totalRunningContainers": "2"
+  },
+  {
+    "deployment": "coverservice",
+    "totalIncomingReq": "3425",
+    "cpuRequired": "12.738585472106934",
+    "memoryRequired": "125145088",
+    "totalRunningContainers": "2"
+  },
+  {
+    "deployment": "searchservice",
+    "totalIncomingReq": "6850",
+    "cpuRequired": "44.93458557128906",
+    "memoryRequired": "136097792",
+    "totalRunningContainers": "2"
+  },
+  {
+    "deployment": "webservice",
+    "totalIncomingReq": "3425",
+    "cpuRequired": "35.79608917236328",
+    "memoryRequired": "105693184",
+    "totalRunningContainers": "2"
+  }
+]

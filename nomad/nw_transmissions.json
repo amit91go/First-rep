@@ -1,0 +1,38 @@
+[
+  {
+    "consumer": "webservice",
+    "provider": "chartservice",
+    "noOfRequests": "4",
+    "bytesTransmitted": "5725"
+  },
+  {
+    "consumer": "webservice",
+    "provider": "chartservice",
+    "noOfRequests": "6",
+    "bytesTransmitted": "6982"
+  },
+  {
+    "consumer": "webservice",
+    "provider": "coverservice",
+    "noOfRequests": "4",
+    "bytesTransmitted": "4581"
+  },
+  {
+    "consumer": "webservice",
+    "provider": "coverservice",
+    "noOfRequests": "6",
+    "bytesTransmitted": "5159"
+  },
+  {
+    "consumer": "webservice",
+    "provider": "searchservice",
+    "noOfRequests": "12",
+    "bytesTransmitted": "7131"
+  },
+  {
+    "consumer": "webservice",
+    "provider": "searchservice",
+    "noOfRequests": "8",
+    "bytesTransmitted": "5803"
+  }
+]
