@@ -3,36 +3,36 @@
     "consumer": "webservice",
     "provider": "chartservice",
     "noOfRequests": "4",
-    "bytesTransmitted": "5725"
+    "bytesTransmitted": "2300"
   },
   {
     "consumer": "webservice",
     "provider": "chartservice",
     "noOfRequests": "6",
-    "bytesTransmitted": "6982"
+    "bytesTransmitted": "3557"
   },
   {
     "consumer": "webservice",
     "provider": "coverservice",
     "noOfRequests": "4",
-    "bytesTransmitted": "4581"
+    "bytesTransmitted": "1156"
   },
   {
     "consumer": "webservice",
     "provider": "coverservice",
     "noOfRequests": "6",
-    "bytesTransmitted": "5159"
+    "bytesTransmitted": "1734"
   },
   {
     "consumer": "webservice",
     "provider": "searchservice",
     "noOfRequests": "12",
-    "bytesTransmitted": "7131"
+    "bytesTransmitted": "3706"
   },
   {
     "consumer": "webservice",
     "provider": "searchservice",
     "noOfRequests": "8",
-    "bytesTransmitted": "5803"
+    "bytesTransmitted": "2378"
   }
 ]
