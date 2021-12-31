@@ -2,29 +2,29 @@
   {
     "deployment": "chartservice",
     "totalIncomingReq": "3425",
-    "cpuRequired": "5.912944793701172",
-    "memoryRequired": "138809344",
+    "cpuRequired": "3.169354955355326",
+    "memoryRequired": "136596206.93333334",
     "totalRunningContainers": "2"
   },
   {
     "deployment": "coverservice",
     "totalIncomingReq": "3425",
-    "cpuRequired": "12.738585472106934",
-    "memoryRequired": "125145088",
+    "cpuRequired": "1.763921567797661",
+    "memoryRequired": "128472405.3333333",
     "totalRunningContainers": "2"
   },
   {
     "deployment": "searchservice",
     "totalIncomingReq": "6850",
-    "cpuRequired": "44.93458557128906",
-    "memoryRequired": "136097792",
+    "cpuRequired": "14.92666857242584",
+    "memoryRequired": "165519360",
     "totalRunningContainers": "2"
   },
   {
     "deployment": "webservice",
     "totalIncomingReq": "3425",
-    "cpuRequired": "35.79608917236328",
-    "memoryRequired": "105693184",
+    "cpuRequired": "20.745268249511714",
+    "memoryRequired": "119209506.13333334",
     "totalRunningContainers": "2"
   }
 ]
